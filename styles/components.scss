@@ -1,0 +1,118 @@
+.btn-special {
+  border: 2px;
+  border-radius: 4px;
+  padding: 40px
+}
+
+
+@mixin button-special($color) {
+  color: $color;
+  // background-color: lighten($color: $background, $amount: 20);
+  // background-color: lighten($color: $color, $amount: 42);
+  background-color: transparentize($color, 0.9);
+  border: 1px solid $color;
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-special-#{$color} {
+    @include button-special($value);
+  }
+}
+
+
+
+// -- Timeline
+.timeline {
+  --inactive: #BDBDBD;
+  --text: #fff;
+  color: var(--text);
+  font-weight: 600;
+
+  li {
+    list-style: none;
+    counter-increment: section;
+
+    &:before {
+      content: counter(section);
+      text-align: center;
+      color: var(--text);
+      width: 1.7rem;
+      height: 1.7rem;
+      display: inline-block;
+      background-color: $primary;
+      border-radius: 50%;
+      border: 2px solid white;
+      z-index: 3;
+      transition: all .2s ease-in-out;
+    }
+
+    &.step {
+      margin-bottom: 24px;
+
+      .number {
+        background-color: var(--inactive);
+        color: inherit;
+        padding: 2px 8px;
+        border-radius: 50%;
+        font-size: 16px;
+      }
+
+      .text {
+        margin-left: 8px;
+        color: $primary;
+      }
+
+      //active step and completed
+      &.active {
+        &:before {
+          background-color: $primary;
+          color: var(--text);
+        }
+
+        .text {
+          color: $primary;
+        }
+
+        // inactive step
+        ~li {
+          &::before {
+            color: var(--text);
+            background-color: var(--inactive);
+          }
+
+          .text {
+            color: var(--inactive);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//table
+.table{
+  thead{
+    th{
+      color: #6B778C;
+      font-weight: 500;
+      font-size: 12px;
+    }
+  }
+  tbody{
+    td{
+      vertical-align: middle;
+      &:nth-child(2){
+        color: #6B778C;
+        font-size: 11px;
+      }
+    }
+  }
+}
+
+.upload-dokumen{
+  .progress{
+    height: 4px;
+  }
+}

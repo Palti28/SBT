@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, maximum-scale=1.0">
+  <link rel="stylesheet" href="../styles/style.css">
+
+
+  <title>Laporan baru</title>
+</head>
+
+<body>
+  <div class="dashboard">
+    <!-- HEADER SECTION -->
+    <div class="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+            <img src="../assets/logo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="#">Beranda <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Pengaduan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Statistik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Peraturan</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item profile">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                  <img src="../assets/Gerard.svg" alt="">
+                </a>
+              </li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- END HEADER SECTION -->
+
+    <!-- START CONTENT -->
+    <div class="content--wrapper">
+      <div class="container">
+
+        <div class="content d-flex flex-column flex-sm-row  ">
+
+          <!-- LEFT CONTENT -->
+          <div class="d-flex flex-column w-25">
+            <span>Ikuti langkah berikut:</span>
+            <!-- TIMELINE -->
+            <div class="timeline mt-32">
+              <li class="step">
+                <span class="text">Pilih Pegawai</span>
+              </li>
+              <li class="step active">
+                <span class="text">Rincian Pelangaran</span>
+              </li>
+              <li class="step">
+                <span class="text">Unggah Dokumen</span>
+              </li>
+              <li class="step">
+                <span class="text">Periksa dan konfirmasi</span>
+              </li>
+            </div>
+            <!-- TIMELINE -->
+          </div>
+          <!-- END LEFT CONTENT -->
+
+          <!-- RIGHT CONTENT -->
+          <div class="d-flex flex-column flex-start">
+            <h3 class="mb-24">Tentukan pegawai yang ingin anda laporkan</h3>
+            <div class="block">
+              <div class="form-group w-50">
+                <label for="nik">Nomor Induk Kependudukan</label>
+                <input type="number" class="form-control" id="nik" aria-describedby="NIK"
+                  placeholder="Cari Nomor Induk Kependudukan">
+              </div>
+              <div class="form-group w-50">
+                <label for="nip">Nomor Induk Pegawai</label>
+                <input type="number" class="form-control" id="nip" aria-describedby="NIP"
+                  placeholder="Cari Nomor Induk Pegawai">
+              </div>
+              <button class="btn btn-outline-primary mr-2">Cari Pegawai</button>
+              <a href="#advanceSearch" data-toggle="modal" data-target="#advanceSearch">Pencarian Lengkap</a>
+
+              <!-- PREVIEW BOX -->
+              <!-- <div class="box--preview box--preview__empty mt-3">
+                <span>pratinjau pilihan pegawai</span>
+              </div> -->
+
+              <div class="box--preview d-flex flex-row mt-3">
+                <div class="photo"> </div>
+                <div class="d-flex flex-column">
+                  <h6 class="text-black01">Christiano Ronaldo</h6>
+                  <span class="text-black-50">Kepala Bidang Perencanaan dan Penganggaran</span>
+                  <span class="text-black-50">Dinas Pendidikan, Kepemudaan dan Olahraga </span>
+                  <span class="text-black-50">Pemerintah Provinsi DKI Jakarta </span>
+                </div>
+              </div>
+              <!-- PREVIEW BOX -->
+
+              <div class="float-right">
+                <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
+                <button type="submit" class="btn btn-primary mt-3" onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Lanjut ke Rincian </button>
+              </div>
+            </div>
+            <!-- END RIGHT CONTENT -->
+          </div>
+          <br>
+
+        </div>
+      </div>
+    </div>
+    <!-- END CONTENT -->
+  </div>
+
+
+  <div class="modal fade " id="advanceSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h3 class="modal-title" id="exampleModalLabel">Pencarian Lengkap</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="advance--search">
+            <div class="advance--search--form">
+              <div class="form-group">
+                <label for="nama">Nama Pegawai</label>
+                <input type="text" class="form-control" id="nik" aria-describedby="Nama pegawai"
+                  placeholder="Tulis Nama Pegawai">
+              </div>
+              <div class="form-group">
+                <label for="instansi">Instansi</label>
+                <input type="text" class="form-control" id="instansi" aria-describedby="Instansi"
+                  placeholder="Tulis Instansi">
+              </div>
+              <div class="form-group">
+                <label for="jabatan">Jabatan</label>
+                <input type="text" class="form-control" id="jabatan" aria-describedby="Instansi"
+                  placeholder="Tulis Jabatan">
+              </div>
+              <div class="form-group">
+                <label for="jabatan">Nomor Induk Kependudukan</label>
+                <input type="number" class="form-control" id="nik" aria-describedby="NIK"
+                  placeholder="Tulis Nomor Induk Kependudukan">
+              </div>
+              <div class="form-group">
+                <label for="nip">Nomor Induk Pegawai</label>
+                <input type="nil" class="form-control" id="nil" aria-describedby="NIP"
+                  placeholder="Tulis Nomor Induk Pegawai">
+              </div>
+              <div class="action my-3">
+                <button type="submit" class="btn btn-outline-primary mt-auto">Cari Pegawai</button>
+                <a href="">Ulangi Pencarian</a>
+              </div>
+
+            </div>
+            <table class="table table-responsive-md mt-24">
+              <thead>
+                <tr>
+                  <th scope="col">Nama</th>
+                  <th scope="col">Instansi</th>
+                  <th scope="col">Jabatan</th>
+                  <th scope="col">Nomor Induk Pegawai</th>
+                  <th scope="col">Nomor Induk Kependudukan</th>
+                  <th scope="col">Akurasi</th>
+                  <th scope="col">Pilih</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="../assets/Angie.svg" alt="">
+                    Christiano Ronaldo
+                  </td>
+                  <td>Dinas Pendidikan, Kepemudaan dan Olahraga</td>
+                  <td>24 Sept 2020</td>
+                  <td>121201298129121</td>
+                  <td>3438129109291092011</td>
+                  <td>100%</td>
+                  <td class="text-center">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                        class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline1"></label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="../assets/Gerard.svg" alt="">
+                    Gerard esviji
+                  </td>
+                  <td>Dinas Pendidikan, Kepemudaan dan Olahraga</td>
+                  <td>24 Sept 2020</td>
+                  <td>121201298129121</td>
+                  <td>3438129109291092011</td>
+                  <td>77%</td>
+                  <td class="text-center">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                        class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline1"></label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Batal</button>
+          <button type="button" class="btn btn-primary">Pilih pegawai</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+
+  <!-- script -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+  </script>
+  <script src="../dist/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+:root {
+  --primary-blue: #2F80ED;
+  --blue02: #EFF5FE;
+  --red01: #DE350B;
+  --red02: #FFDBDB;
+  --green: #2FED92;
+  --black01: #172B4D;
+  --black02: #6B778C;
+  
+}
+
+//override bootstrap scss
+$theme-colors: ("primary": #2F80ED,
+  "danger": #ff4136,
+  "purple": #EFD3FA,
+  "black02": #6B778C,
+  "yellow": #FFE28A,
+  "purple-btn": #403294,
+  "yellow-btn": #FF8B00,
+  "red-btn": #BF2600,
+  "black01": #172B4D
+  );
+
+$font-size-base: .875rem !default;
+
+
+@import "../dist/scss/bootstrap.scss";
+@import "components.scss";
+
+
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+a {
+  color: var(--primary-blue);
+}
+
+.caption-02 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+
+.m {
+  &t {
+    &-32 {
+      margin-top: 32px;
+    }
+
+    &-24 {
+      margin-top: 24px;
+    }
+  }
+
+  &b {
+    &-32 {
+      margin-bottom: 32px;
+
+    }
+
+    &-24 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+//card
+.card {
+  box-shadow: 0px 3px 5px rgba(9, 30, 66, 0.2), 0px 0px 1px rgba(9, 30, 66, 0.31);
+  border-radius: 3px;
+
+  .ticker-number {}
+
+  .avatar {
+    span {
+      vertical-align: bottom;
+    }
+
+    img {
+      height: 24px;
+
+    }
+  }
+}
+
+//badge
+.badge {
+  font-weight: 500;
+  size: 11px;
+  line-height: 16px;
+
+  &.badge-purple {
+    color: #6418AA;
+  }
+
+  &.badge-yellow {
+    color: #7C6022;
+  }
+}
+
+//count
+.count {
+  color: var(--primary-blue);
+  margin: 0 10px 0 0;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  color: var(--black01);
+}
+
+
+.btn {
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 6px 16px;
+
+  &-small{
+    font-size: 11px;
+    line-height: 16px;
+    padding: 4px 12px;
+    font-weight: 500;
+  }
+}
+
+label {
+  font-weight: 400;
+  size: 12px;
+  height: 16px;
+  color: var(--black02);
+
+  &[class*="form-check-label"]{
+    font-size: 14px;
+    color: var(--black01);
+    line-height: 16px;
+    font-weight: normal;
+  }
+
+  &.help-text{
+    font-size: 11px;
+  }
+}
+
+
+// login
+.login {
+  height: 100%;
+
+  .login--box {
+    width: 376px;
+    height: 100%;
+  }
+
+  .login--logo {
+    .logo--image {
+      width: 70%;
+      object-fit: scale-down;
+    }
+
+    .logo--text {
+      font-size: 20px;
+      line-height: 24px;
+      color: var(--black01);
+      font-weight: 600;
+      margin: 40px auto 84px;
+    }
+  }
+}
+
+
+// Navbar
+.header {
+  border-bottom: 2px solid #E74460;
+  box-shadow: 0px 4px 4px rgba(196, 196, 196, 0.22);
+}
+
+.navbar {
+
+  .navbar-brand {
+    img {
+      height: 56px;
+    }
+  }
+
+  .nav-item {
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 16px;
+    margin: auto;
+    font-weight: 500;
+
+    a {
+      color: var(--black02);
+    }
+
+    &.active a {
+      color: var(--primary-blue);
+    }
+
+    &.profile {
+      img {
+        height: 40px;
+      }
+    }
+  }
+}
+
+//content
+.content--wrapper {
+  padding: 73px 0;
+
+  .content {
+    &>div {
+      // flex: 1;
+      width: 100%;
+      @media (min-width: 575.98px) {
+        margin-right: 10%;
+        
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+    }
+
+    .content--subheading {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+//card-stack
+.card-stack {
+  >div {
+    margin-bottom: 12px;
+  }
+}
+
+
+
+.compliment-type{
+  display: grid;
+  grid-row: auto auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.advance--search--form{
+  display: grid;
+  grid-row: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+
+
+.box--preview{
+  border: 1px solid #2F80ED;
+  border-radius: 4px;
+  padding: 24px;
+  font-size: 11px;
+  color: #BDBDBD;
+  background-color: var(--blue02);
+
+  label{
+    margin-bottom: 0;
+  }
+
+  .photo{
+    background-color: var(--black02);
+    height: 70px;
+    width: 50px;
+    margin-right: 20px;
+  }
+
+  &.box--preview__empty{
+    text-align: center;
+    background-color: transparent;
+    padding: 40px;
+  }
+}
+
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+  .login--box {
+    max-width: 300px;
+  }
+
+}
+
+
+
+
+@media (min-width: 575.98) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
