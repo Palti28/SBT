@@ -12,8 +12,7 @@
 </head>
 
 <body>
-  <div class="dashboard">
-    <!-- HEADER SECTION -->
+  <div class="pelaporan">
       <!-- HEADER SECTION -->
       <div class="header">
         <div class="container">
@@ -62,14 +61,11 @@
         </div>
       </div>
       <!-- END HEADER SECTION -->
-    <!-- END HEADER SECTION -->
 
     <!-- START CONTENT -->
     <div class="content--wrapper">
       <div class="container">
-
         <div class="content d-flex flex-column flex-sm-row  ">
-
           <!-- LEFT CONTENT -->
           <div class="d-flex flex-column w-25">
             <span>Ikuti langkah berikut:</span>
@@ -78,13 +74,13 @@
               <li class="step">
                 <span class="text">Pilih Pegawai</span>
               </li>
-              <li class="step active">
+              <li class="step">
                 <span class="text">Rincian Pelangaran</span>
               </li>
               <li class="step">
                 <span class="text">Unggah Dokumen</span>
               </li>
-              <li class="step">
+              <li class="step active">
                 <span class="text">Periksa dan konfirmasi</span>
               </li>
             </div>
@@ -93,84 +89,76 @@
           <!-- END LEFT CONTENT -->
 
           <!-- RIGHT CONTENT -->
-          <div class="d-flex flex-column flex-start">
-            <h3 class="mb-24">Tentukan kategori pelanggaran & rekomendasi sanksi</h3>
-            <div class="block">
-              <label>Sumber Pengaduan </label> <br>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sumber" id="sumber1" value="sumber1">
-                <label class="form-check-label" for="sumber1">Laporan Masyarakat</label>
+          <div class="d-flex flex-column flex-start w-75 ">
+            <h3 class="mb-24 mb-0">Pastikan pengaduan anda sudah benar dan lengkap</h3>
+            <hr>
+            <span>IDENTITAS PEGAWAI TERLAPOR</span>
+            <div class="d-flex justify-content-between mt-3 mb-2 pb-3 border-bottom">
+              <div class="d-flex flex-column">
+                <b>Christiano Ronaldo</b>
+                <span class="small-text">Kepala Bidang Perencanaan dan Penganggaran</span>
+                <span class="small-text">Dinas Pendidikan, Kepemudaan dan Olahraga</span>
+                <span class="small-text">Pemerintah Provinsi DKI Jakarta</span>
               </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sumber" id="sumber2" value="sumber2">
-                <label class="form-check-label" for="sumber2">Pengawasan Instansi Pemerintah</label>
-              </div>
-              <br>
-              <label class="mt-24">Periode Kejadian Pelanggaran</label> <br>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="periode" id="periode1" value="periode1">
-                <label class="form-check-label" for="periode1">Sebelum Penetapan Calon</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="periode" id="periode2" value="periode2">
-                <label class="form-check-label" for="periode2">Setelah Penetapan Calon</label>
-              </div>
-              <br>
-              <label class="mt-24" for="pelanggaran">Kategori Pelanggaran Netralitas</label>
-              <select id="pelanggaran" class="custom-select">
-                <option selected>Open this select menu</option>
-              </select>
-              
-              
-
-
-
-
-              <!-- PREVIEW BOX -->
-              <div class="box--preview box--preview__empty mt-3">
-                <span>pratinjau rincian pelanggaran dan sanksi</span>
-              </div>
-
-              <div class="box--preview d-flex flex-row mt-3">
-                <div class="d-flex flex-column">
-                  <h6 class="text-black01">Kampanye/sosialisasi media sosial (posting, comment, share, like)</h6>
-
-                  <label class="mt-2 mb-1" for="">Peraturan yang Mengatur</label>
-                  <div class="text-black01">Pasal 9 angka 2 UU 5/2014, Pasal 4 angka 15 PP 53/2010</div>
-
-                  <label class="mt-2 mb-1" for="">Ancaman Sanksi</label>
-                  <h6 class="text-black01">Hukuman Disiplin Sedang</h6>
-
-                  <div class="text-black01 text-weight-bolder mb-1">sesuai Pasal 12 angka 9, PP 53/2010</div>
-                  <ul class="text-black01 small-text">
-                    <li>16-20 hari kerja (penundaan gaji berkala selama 1 (satu) tahun)</li>
-                    <li>21-25 hari kerja (penundaan kenaikan pangkat selama 1 (satu) tahun)</li>
-                    <li>26-30 hari kerja (penurunan pangkat pada pangkat setingkat lebih rendah selama 1 (satu) tahun)</li>
-                  </ul>
-                </div>
-              </div>
-              <!-- PREVIEW BOX -->
-
-              <label class="mt-24" for="pelanggaran">Waktu Kejadian</label>
-              <select id="pelanggaran" class="custom-select">
-                <option selected>Minggu, 13 September 2020</option>
-              </select>
-
-              <div class="form-group mt-24">
-                <label for="deksripsiKejadian">Deskripsi Kejadian Pelanggaran</label>
-                <textarea class="form-control" id="deksripsiKejadian" rows="5" placeholder="Tuliskan secara ringkas tentang pengaduan anda"></textarea>
-              </div>
-
-              <div class="float-right">
-                <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
-                <button type="submit" class="btn btn-primary mt-3" onclick="location.href = 'new-complaintment-unggahdokumen.html'">Lanjut Unggah Dokumen</button>
+              <div class="flex">
+                <div class="empty__photo"></div>
               </div>
             </div>
+            <span>PELANGGARAN</span>
+            <div class="d-flex justify-content-between mt-3 mb-2 pb-3 border-bottom">
+              <div class="d-flex flex-column">
+                <h6 class="text-black01">Kampanye/sosialisasi media sosial (posting, comment, share, like)</h6>
+                <div class="mt-3 small-text">Sumber Pengaduan</div>
+                <div class="text-black01 text-weight-bolder">Laporan Masyarakat</div>
+                <div class="mt-3 small-text" for="">Periode Kejadian Pelanggaran</div>
+                <div class="text-black01">Setelah Penetapan Calon</div>
+                <div class="mt-3 small-text" for="">Ancaman Sanksi</div>
+                <h6 class="text-black01">Hukuman Disiplin Sedang</h6>
+                <div class="text-black01 text-weight-bolder">sesuai Pasal 12 angka 9, PP 53/2010</div>
+                <ul class=" small-text" style="padding-left: 15px;">
+                  <li>16-20 hari kerja (penundaan gaji berkala selama 1 (satu) tahun)</li>
+                  <li>21-25 hari kerja (penundaan kenaikan pangkat selama 1 (satu) tahun)</li>
+                  <li>26-30 hari kerja (penurunan pangkat pada pangkat setingkat lebih rendah selama 1 (satu) tahun)
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <span>DOKUMEN BUKTI PENDUKUNG</span>
+            <div class="d-flex flex-column mt-3 mb-2 pb-2">
+              <div class="d-flex flex-column w-100">
+                <div class=" py-3">
+                  <div class="d-inline-block mr-3">icon</div>
+                  <span>Surat Pengantar (1).pdf</span>
+                </div>
+                <div class="border-top py-3">
+                  <div class="d-inline-block mr-3">icon</div>
+                  <span>Berita Acara Pelapor.pdf</span>
+                </div>
+                <div class="border-top py-3">
+                  <div class="d-inline-block mr-3">icon</div>
+                  <span>Berita Acara saksi.doc</span>
+                </div>
+                <div class="border-top py-3">
+                  <div class="d-inline-block mr-3">icon</div>
+                  <span>Foto 1.jpg</span>
+                </div>
+              </div>
+              <span class="small-text">https://www.youtube.com/watch?v=5rX1EF_VzeE</span>
+              <span class="small-text">https://www.youtube.com/watch?v=5rX1EF_VzeE</span>
+              <span class="small-text">https://www.youtube.com/watch?v=5rX1EF_VzeE</span>
+            </div>
             <!-- END RIGHT CONTENT -->
+            <div class="float-right mt-24" style="align-self: flex-end;">
+              <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
+              <button type="submit" class="btn btn-primary mt-3" 
+                onclick="location.href = 'new-complainment-success.html'">Kirim Pengaduan</button>
+            </div>
           </div>
           <br>
 
         </div>
+        
       </div>
     </div>
     <!-- END CONTENT -->

@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 :root {
   --primary-blue: #2F80ED;
   --blue02: #EFF5FE;
@@ -11027,18 +11028,64 @@ h3 {
   height: 4px;
 }
 
+.vertical-timeline .step {
+  color: #007bff;
+}
+.vertical-timeline .step .small-text {
+  color: #007bff;
+}
+.vertical-timeline .step + div {
+  font-size: 24px;
+}
+.vertical-timeline .step.active ~ .step {
+  color: unset;
+}
+.vertical-timeline .step.active ~ .step .small-text {
+  color: var(--black02);
+}
+
+.avatar-lg {
+  width: 72px;
+  height: 72px;
+}
+
+.notification .dropdown-toggle::after {
+  display: none;
+}
+.notification i {
+  font-size: 16px;
+}
+
 h3 {
   font-size: 20px;
   line-height: 24px;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #BDBDBD;
+  height: 1px;
 }
 
 a {
   color: var(--primary-blue);
 }
 
+.small-text {
+  font-size: 11px;
+  color: var(--black02);
+}
+
 .caption-02 {
   font-size: 12px;
   line-height: 16px;
+}
+
+.w-90 {
+  width: 90%;
 }
 
 .mt-32 {
@@ -11052,6 +11099,12 @@ a {
 }
 .mb-24 {
   margin-bottom: 24px;
+}
+
+.empty__photo {
+  height: 80px;
+  width: 60px;
+  background-color: #E0E0E0;
 }
 
 .card {
@@ -11149,10 +11202,10 @@ label.help-text {
 }
 .navbar .nav-item {
   padding: 0 12px;
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 24px;
   margin: auto;
-  font-weight: 500;
+  font-weight: 400;
 }
 .navbar .nav-item a {
   color: var(--black02);
@@ -11200,11 +11253,21 @@ label.help-text {
   gap: 1rem;
 }
 
+.d-grid {
+  display: grid;
+  grid-row: auto auto;
+}
+.d-grid.grid-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.d-grid.grid-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .box--preview {
   border: 1px solid #2F80ED;
   border-radius: 4px;
   padding: 24px;
-  font-size: 11px;
   color: #BDBDBD;
   background-color: var(--blue02);
 }
@@ -11221,6 +11284,28 @@ label.help-text {
   text-align: center;
   background-color: transparent;
   padding: 40px;
+}
+.box--preview.box--preview__black {
+  color: var(--black01);
+}
+
+.upload-form {
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: baseline;
+}
+.upload-form .uploading {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+.upload-form label {
+  font-size: 11px;
+}
+
+.upload-dokumen .delete-btn {
+  padding: 0;
+  font-size: 22px;
+  color: var(--black02);
 }
 
 @media (max-width: 575.98px) {

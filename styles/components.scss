@@ -116,3 +116,51 @@ $value in $theme-colors {
     height: 4px;
   }
 }
+
+
+//vertical-timeline
+.vertical-timeline{
+  .step{
+    //arrow
+    color: $primary;
+    .small-text{
+      color: $primary ;
+    }
+    +div{
+      font-size: 24px;
+    }
+
+    &.active{
+
+      ~.step{
+        color: unset;
+        .small-text{
+          color: var(--black02);
+        }
+      }
+    }
+
+
+  }
+}
+
+
+
+//AVATAR
+.avatar{
+  &-lg{
+    width: 72px;
+    height: 72px;
+  }
+}
+
+//NOTIFICATION
+.notification{
+  .dropdown-toggle::after{
+    display: none;
+  }
+  i{
+    font-size: 16px;
+
+  }
+}
