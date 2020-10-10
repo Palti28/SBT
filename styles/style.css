@@ -10740,6 +10740,18 @@ h3 {
   border: 1px solid #172B4D;
 }
 
+.badge {
+  font-weight: 500;
+  size: 11px;
+  line-height: 16px;
+}
+.badge.badge-purple {
+  color: #6418AA;
+}
+.badge.badge-yellow {
+  color: #7C6022;
+}
+
 .timeline {
   --inactive: #BDBDBD;
   --text: #fff;
@@ -10774,8 +10786,13 @@ h3 {
   font-size: 16px;
 }
 .timeline li.step .text {
-  margin-left: 8px;
   color: #007bff;
+}
+.timeline li.step .sub-text {
+  font-size: 11px;
+  color: var(--black02);
+  font-weight: lighter;
+  margin-left: 31px;
 }
 .timeline li.step.active:before {
   content: counter(section);
@@ -10802,7 +10819,7 @@ h3 {
 .table tbody td {
   vertical-align: middle;
 }
-.table tbody td:nth-child(2) {
+.table tbody td.col-instansi {
   color: #6B778C;
   font-size: 11px;
 }
@@ -10839,6 +10856,18 @@ h3 {
   font-size: 16px;
 }
 
+.chat-box .single-chat {
+  background-color: #EFF5FE;
+  padding: 1rem;
+  border-radius: 4px;
+  border: 1px solid none;
+}
+.chat-box .chat-box-action {
+  border-top: 1px solid #bdbdbd;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
 h3 {
   font-size: 20px;
   line-height: 24px;
@@ -10856,6 +10885,12 @@ hr {
 a {
   color: var(--primary-blue);
 }
+a.nav-link {
+  color: unset;
+}
+a.nav-link.active {
+  color: var(--primary-blue);
+}
 
 .small-text {
   font-size: 11px;
@@ -10865,6 +10900,10 @@ a {
 .caption-02 {
   font-size: 12px;
   line-height: 16px;
+}
+
+.w-35 {
+  width: 35%;
 }
 
 .w-90 {
@@ -10899,18 +10938,6 @@ a {
 }
 .card .avatar img {
   height: 24px;
-}
-
-.badge {
-  font-weight: 500;
-  size: 11px;
-  line-height: 16px;
-}
-.badge.badge-purple {
-  color: #6418AA;
-}
-.badge.badge-yellow {
-  color: #7C6022;
 }
 
 .count {
@@ -11000,6 +11027,20 @@ label.help-text {
   height: 40px;
 }
 
+.nav.side--nav li {
+  margin-bottom: 0.25rem;
+}
+.nav.side--nav a {
+  padding: 8px;
+  border-radius: 4px;
+}
+.nav.side--nav a:hover {
+  background-color: rgba(47, 128, 237, 0.2);
+}
+.nav.side--nav a.nav-link.active {
+  background-color: rgba(47, 128, 237, 0.2);
+}
+
 .content--wrapper {
   padding: 73px 0;
 }
@@ -11008,7 +11049,7 @@ label.help-text {
 }
 @media (min-width: 575.98px) {
   .content--wrapper .content > div {
-    margin-right: 10%;
+    margin-right: 5%;
   }
 }
 .content--wrapper .content > div:nth-child(2) {

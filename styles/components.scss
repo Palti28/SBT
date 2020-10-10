@@ -22,6 +22,27 @@ $value in $theme-colors {
 
 
 
+@mixin small-text {
+  font-size: 11px;
+  // line-height: 16px;
+  color: var(--black02);
+}
+
+//badge
+.badge {
+  font-weight: 500;
+  size: 11px;
+  line-height: 16px;
+
+  &.badge-purple {
+    color: #6418AA;
+  }
+
+  &.badge-yellow {
+    color: #7C6022;
+  }
+}
+
 // -- Timeline
 .timeline {
   --inactive: #BDBDBD;
@@ -59,14 +80,20 @@ $value in $theme-colors {
       }
 
       .text {
-        margin-left: 8px;
+        // margin-left: 8px;
         color: $primary;
+      }
+
+      .sub-text{
+        @include small-text;
+        font-weight: lighter;
+        margin-left: 31px;
       }
 
       //active step and completed
       &.active {
         &:before {
-          content:  counter(section);
+          content: counter(section);
           background-color: $primary;
           color: var(--text);
         }
@@ -94,49 +121,56 @@ $value in $theme-colors {
 
 
 //table
-.table{
-  thead{
-    th{
+.table {
+  thead {
+    th {
       color: #6B778C;
       font-weight: 500;
       font-size: 12px;
     }
   }
-  tbody{
-    td{
+
+  tbody {
+    td {
       vertical-align: middle;
-      &:nth-child(2){
+
+      &.col-instansi {
         color: #6B778C;
         font-size: 11px;
       }
+
+
     }
   }
 }
 
-.upload-dokumen{
-  .progress{
+.upload-dokumen {
+  .progress {
     height: 4px;
   }
 }
 
 
 //vertical-timeline
-.vertical-timeline{
-  .step{
+.vertical-timeline {
+  .step {
     //arrow
     color: $primary;
-    .small-text{
-      color: $primary ;
+
+    .small-text {
+      color: $primary;
     }
-    +div{
+
+    +div {
       font-size: 24px;
     }
 
-    &.active{
+    &.active {
 
-      ~.step{
+      ~.step {
         color: unset;
-        .small-text{
+
+        .small-text {
           color: var(--black02);
         }
       }
@@ -149,20 +183,39 @@ $value in $theme-colors {
 
 
 //AVATAR
-.avatar{
-  &-lg{
+.avatar {
+  &-lg {
     width: 72px;
     height: 72px;
   }
 }
 
 //NOTIFICATION
-.notification{
-  .dropdown-toggle::after{
+.notification {
+  .dropdown-toggle::after {
     display: none;
   }
-  i{
+
+  i {
     font-size: 16px;
 
+  }
+}
+
+
+//CHAT-BOX
+.chat-box{
+
+  .single-chat{
+    background-color: #EFF5FE;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid none;
+  }
+
+  .chat-box-action{
+    border-top: 1px solid #bdbdbd;
+    padding-top: 1rem;
+    margin-top: 1rem;
   }
 }

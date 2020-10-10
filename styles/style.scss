@@ -6,7 +6,7 @@
   --green: #2FED92;
   --black01: #172B4D;
   --black02: #6B778C;
-  
+
 }
 
 //override bootstrap scss
@@ -18,14 +18,14 @@ $theme-colors: ("primary": #2F80ED,
   "purple-btn": #403294,
   "yellow-btn": #FF8B00,
   "red-btn": #BF2600,
-  "black01": #172B4D
-  );
+  "black01": #172B4D);
 
 $font-size-base: .875rem !default;
 
 
 @import "../dist/scss/bootstrap.scss";
 @import "components.scss";
+// @import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
 @import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 
 h3 {
@@ -33,21 +33,29 @@ h3 {
   line-height: 24px;
 }
 
-hr{
+hr {
   border: 0;
-    clear: both;
-    display: block;
-    width: 100%;
-    background-color: #BDBDBD;
-    height: 1px;
+  clear: both;
+  display: block;
+  width: 100%;
+  background-color: #BDBDBD;
+  height: 1px;
 }
 
 
 a {
   color: var(--primary-blue);
+
+  &.nav-link {
+    color: unset;
+
+    &.active {
+      color: var(--primary-blue);
+    }
+  }
 }
 
-.small-text{
+.small-text {
   font-size: 11px;
   // line-height: 16px;
   color: var(--black02);
@@ -58,7 +66,11 @@ a {
   line-height: 16px;
 }
 
-.w-90{
+.w-35 {
+  width: 35%;
+}
+
+.w-90 {
   width: 90%;
 }
 
@@ -85,7 +97,7 @@ a {
   }
 }
 
-.empty__photo{
+.empty__photo {
   height: 80px;
   width: 60px;
   background-color: #E0E0E0;
@@ -110,20 +122,6 @@ a {
   }
 }
 
-//badge
-.badge {
-  font-weight: 500;
-  size: 11px;
-  line-height: 16px;
-
-  &.badge-purple {
-    color: #6418AA;
-  }
-
-  &.badge-yellow {
-    color: #7C6022;
-  }
-}
 
 //count
 .count {
@@ -148,7 +146,7 @@ body {
   border-radius: 4px;
   padding: 6px 16px;
 
-  &-small{
+  &-small {
     font-size: 11px;
     line-height: 16px;
     padding: 4px 12px;
@@ -162,14 +160,14 @@ label {
   height: 16px;
   color: var(--black02);
 
-  &[class*="form-check-label"]{
+  &[class*="form-check-label"] {
     font-size: 14px;
     color: var(--black01);
     line-height: 16px;
     font-weight: normal;
   }
 
-  &.help-text{
+  &.help-text {
     font-size: 11px;
   }
 }
@@ -238,6 +236,31 @@ label {
   }
 }
 
+.nav {
+  &.side--nav {
+li{
+  margin-bottom: .25rem;
+}
+
+    a {
+      padding: 8px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: rgba(47, 128, 237, 0.2);
+      }
+    }
+
+    a.nav-link.active {
+
+      
+      background-color: rgba(47, 128, 237, 0.2);
+
+    }
+  }
+}
+
+
 //content
 .content--wrapper {
   padding: 73px 0;
@@ -246,9 +269,10 @@ label {
     &>div {
       // flex: 1;
       width: 100%;
+
       @media (min-width: 575.98px) {
-        margin-right: 10%;
-        
+        margin-right: 5%;
+
       }
 
       &:nth-child(2) {
@@ -270,30 +294,31 @@ label {
 }
 
 
-.compliment-type{
+.compliment-type {
   display: grid;
   grid-row: auto auto;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.advance--search--form{
+.advance--search--form {
   display: grid;
   grid-row: auto auto;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
 }
 
-.d-grid{
+.d-grid {
   display: grid;
   grid-row: auto auto;
 
-  &.grid{
-    &-2{
-    grid-template-columns: 1fr 1fr;
+  &.grid {
+    &-2 {
+      grid-template-columns: 1fr 1fr;
 
     }
-    &-3{
+
+    &-3 {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -301,55 +326,55 @@ label {
 
 
 
-.box--preview{
+.box--preview {
   border: 1px solid #2F80ED;
   border-radius: 4px;
   padding: 24px;
-  
+
   color: #BDBDBD;
   background-color: var(--blue02);
 
-  label{
+  label {
     margin-bottom: 0;
   }
 
-  .photo{
+  .photo {
     background-color: var(--black02);
     height: 70px;
     width: 50px;
     margin-right: 20px;
   }
 
-  &.box--preview__empty{
+  &.box--preview__empty {
     text-align: center;
     background-color: transparent;
     padding: 40px;
   }
 
-  &.box--preview__black{
+  &.box--preview__black {
     color: var(--black01);
   }
 }
 
-.upload-form{
+.upload-form {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   align-items: baseline;
 
 
-  
-  .uploading{
+
+  .uploading {
     padding-left: 0px;
     padding-right: 20px;
   }
 
-  label{
+  label {
     font-size: 11px;
   }
 }
 
-.upload-dokumen{
-  .delete-btn{
+.upload-dokumen {
+  .delete-btn {
     padding: 0;
     font-size: 22px;
     color: var(--black02);
