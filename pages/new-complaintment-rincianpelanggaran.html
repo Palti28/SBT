@@ -6,61 +6,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, maximum-scale=1.0">
   <link rel="stylesheet" href="../styles/style.css">
-
-
+  <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
   <title>Laporan baru</title>
 </head>
 
 <body>
   <div class="dashboard">
     <!-- HEADER SECTION -->
-      <div class="header">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
-              <img src="../assets/logo.png" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Beranda </span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pengaduan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Statistik</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Peraturan</a>
-                </li>
-                <li class="nav-item notification dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="far fa-bell"></i>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item profile">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
-                    <img src="../assets/Alvin.svg" alt="">
-                  </a>
-                </li>
-              </ul>
-          </nav>
-        </div>
+    <div class="header">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+            <img src="../assets/logo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Beranda </span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pengaduan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Statistik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Peraturan</a>
+              </li>
+              <li class="nav-item notification dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="far fa-bell"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item profile">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                  <img src="../assets/Alvin.svg" alt="">
+                </a>
+              </li>
+            </ul>
+        </nav>
       </div>
-      <!-- END HEADER SECTION -->
+    </div>
+    <!-- END HEADER SECTION -->
 
     <!-- START CONTENT -->
     <div class="content--wrapper">
@@ -92,15 +91,6 @@
           <div class="d-flex flex-column flex-start">
             <h3 class="mb-24">Tentukan kategori pelanggaran & rekomendasi sanksi</h3>
             <div class="block">
-              <label>Sumber Pengaduan </label> <br>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sumber" id="sumber1" value="sumber1">
-                <label class="form-check-label" for="sumber1">Laporan Masyarakat</label>
-              </div>
-              <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sumber" id="sumber2" value="sumber2">
-                <label class="form-check-label" for="sumber2">Pengawasan Instansi Pemerintah</label>
-              </div>
               <br>
               <label class="mt-24">Periode Kejadian Pelanggaran</label> <br>
               <div class="form-check form-check-inline">
@@ -116,14 +106,9 @@
               <select id="pelanggaran" class="custom-select">
                 <option selected>Open this select menu</option>
               </select>
-              
-              
-
-
-
 
               <!-- PREVIEW BOX -->
-              <div class="box--preview box--preview__empty mt-3">
+              <!-- <div class="box--preview box--preview__empty mt-3">
                 <span>pratinjau rincian pelanggaran dan sanksi</span>
               </div>
 
@@ -141,10 +126,11 @@
                   <ul class="text-black01 small-text">
                     <li>16-20 hari kerja (penundaan gaji berkala selama 1 (satu) tahun)</li>
                     <li>21-25 hari kerja (penundaan kenaikan pangkat selama 1 (satu) tahun)</li>
-                    <li>26-30 hari kerja (penurunan pangkat pada pangkat setingkat lebih rendah selama 1 (satu) tahun)</li>
+                    <li>26-30 hari kerja (penurunan pangkat pada pangkat setingkat lebih rendah selama 1 (satu) tahun)
+                    </li>
                   </ul>
                 </div>
-              </div>
+              </div> -->
               <!-- PREVIEW BOX -->
 
               <label class="mt-24" for="pelanggaran">Waktu Kejadian</label>
@@ -154,12 +140,17 @@
 
               <div class="form-group mt-24">
                 <label for="deksripsiKejadian">Deskripsi Kejadian Pelanggaran</label>
-                <textarea class="form-control" id="deksripsiKejadian" rows="5" placeholder="Tuliskan secara ringkas tentang pengaduan anda"></textarea>
+                <!-- <textarea class="form-control" id="deksripsiKejadian" rows="5" placeholder="Tuliskan secara ringkas tentang pengaduan anda"></textarea> -->
+                <form method="post">
+                  <div id="editor">This is some sample content.</div>
+                </form>
+
               </div>
 
               <div class="float-right">
                 <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
-                <button type="submit" class="btn btn-primary mt-3" onclick="location.href = 'new-complaintment-unggahdokumen.html'">Lanjut Unggah Dokumen</button>
+                <button type="submit" class="btn btn-primary mt-3"
+                  onclick="location.href = 'new-complaintment-unggahdokumen.html'">Lanjut Unggah Dokumen</button>
               </div>
             </div>
             <!-- END RIGHT CONTENT -->
@@ -176,15 +167,17 @@
 
 
   <!-- script -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  <script>
+    ClassicEditor
+      .create(document.querySelector('#editor'))
+      .then(editor => {
+        console.log(editor);
+      })
+      .catch(error => {
+        console.error(error);
+      });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
-  <script src="../dist/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-  </script>
+
 </body>
 
 </html>

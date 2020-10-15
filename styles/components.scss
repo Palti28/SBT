@@ -61,7 +61,7 @@ $value in $theme-colors {
       width: 1.7rem;
       height: 1.7rem;
       display: inline-block;
-      background-color: $primary;
+      background-color: $green;
       border-radius: 50%;
       border: 2px solid white;
       z-index: 3;
@@ -94,7 +94,7 @@ $value in $theme-colors {
       &.active {
         &:before {
           content: counter(section);
-          background-color: $primary;
+          background-color: $primary; 
           color: var(--text);
         }
 

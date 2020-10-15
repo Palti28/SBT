@@ -9,18 +9,27 @@
 
 }
 
+
 //override bootstrap scss
-$theme-colors: ("primary": #2F80ED,
+$theme-colors: (
+  "primary": #2F80ED,
   "danger": #ff4136,
   "purple": #EFD3FA,
   "black02": #6B778C,
   "yellow": #FFE28A,
+  "green": #2FED92,
   "purple-btn": #403294,
   "yellow-btn": #FF8B00,
   "red-btn": #BF2600,
-  "black01": #172B4D);
+  "black01": #172B4D
+  );
+
 
 $font-size-base: .875rem !default;
+
+$primary: #2F80ED;
+$green: #2FED92;
+$black02: #5B778C;
 
 
 @import "../dist/scss/bootstrap.scss";
@@ -31,6 +40,10 @@ $font-size-base: .875rem !default;
 h3 {
   font-size: 20px;
   line-height: 24px;
+}
+
+.sub{
+  color: $black02;
 }
 
 hr {
@@ -238,9 +251,9 @@ label {
 
 .nav {
   &.side--nav {
-li{
-  margin-bottom: .25rem;
-}
+    li {
+      margin-bottom: .25rem;
+    }
 
     a {
       padding: 8px;
@@ -253,7 +266,7 @@ li{
 
     a.nav-link.active {
 
-      
+
       background-color: rgba(47, 128, 237, 0.2);
 
     }
