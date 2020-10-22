@@ -41,6 +41,10 @@ $value in $theme-colors {
   &.badge-yellow {
     color: #7C6022;
   }
+
+  &.badge-yellow {
+    color: #6B778C;
+  }
 }
 
 // -- Timeline
@@ -142,6 +146,12 @@ $value in $theme-colors {
 
     }
   }
+
+  &.table-laporan{
+    .btn{
+      width: 118px;
+    }
+  }
 }
 
 .upload-dokumen {
@@ -218,4 +228,38 @@ $value in $theme-colors {
     padding-top: 1rem;
     margin-top: 1rem;
   }
+}
+
+
+// CUSTOM INPUT FILE BUTTON
+input[type="file"]{
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  height: fit-content;
+  cursor: pointer;
+}
+
+
+// BUTTON - DISABLED
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #BDBDBD;
+  background-color: #F0F1F4;
+  border-color: #F0F1F4;}
+
+
+ //MODAL
+.modal-header{
+  border-bottom: 0;
+}
+
+.modal-body{
+  padding-bottom: 0.5rem;
+}
+
+.modal-footer{
+  border-top: 0;
+  padding: 0.5rem 0.75rem;
 }

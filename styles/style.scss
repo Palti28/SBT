@@ -21,7 +21,8 @@ $theme-colors: (
   "purple-btn": #403294,
   "yellow-btn": #FF8B00,
   "red-btn": #BF2600,
-  "black01": #172B4D
+  "black01": #172B4D,
+  "orange": #FF8B00
   );
 
 
@@ -422,3 +423,12 @@ label {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {}
+
+
+.person-img{
+  img{
+    width: 100px;
+    height: 150px;
+    object-fit: scale-down;
+  }
+}

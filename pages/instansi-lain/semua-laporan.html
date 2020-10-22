@@ -28,10 +28,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Beranda </span></a>
+                <a class="nav-link" href="./home.html">Beranda </span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pengaduan</a>
+                <a class="nav-link" href="#">Inbox</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Statistik</a>
@@ -75,26 +75,25 @@
             </button>
             <ul class="nav side--nav flex-column ">
               <li class="nav-item ">
-                <a class="nav-link " href="#">
+                <a class="nav-link active" href="#">
                   <img src="../../assets/icons/new.svg" class="mr-2" alt="">
-                  Pengaduan Baru
+                  Laporan
                 </a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link active" href="#">
-                  <img src="../../assets/icons/process.svg" class="mr-2" alt="">Pengaduan Diproses</a>
+                <a class="nav-link " href="#">
+                  <img src="../../assets/icons/process.svg" class="mr-2" alt="">Pengaduan</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="#"><img src="../../assets/icons/draft.svg" class="mr-2" alt="">Draft Anda</a>
               </li>
-              <li class="nav-item ">
+              <!-- <li class="nav-item ">
                 <a class="nav-link" href="#"><img src="../../assets/icons/done.svg" class="mr-2" alt="">Pengaduan
                   Selesai</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="#"><img src="../../assets/icons/all.svg" class="mr-2" alt="">Semua
-                  Pengaduan</a>
-              </li>
+                <a class="nav-link" href="#"><img src="../../assets/icons/all.svg" class="mr-2" alt="">Semua Pengaduan</a>
+              </li> -->
             </ul>
           </div>
 
@@ -130,9 +129,10 @@
             </div>
             <span class="" style="font-size: 20px;">
               <img src="../../assets/icons/new.svg" alt="">
-              Pengaduan Berjalan
+              Laporan
             </span>
-            <table class="table table-responsive-md mt-24">
+            <span class="text-black02 mt-2">Laporan pelanggaran dari instansi pemerintahan atau laporan masyarakat </span>
+            <table class="table table-responsive-md mt-24 table-laporan">
               <thead>
                 <tr>
                   <th scope="col">No. Pengaduan</th>
@@ -180,11 +180,11 @@
                     <div class="badge badge-yellow">Verifikasi KASN</div>
                   </td>
                   <td>14-09-2020</td>
-                  <td>PIC here</td>
+                  <td>PSadio Mane (Bawaslu)</td>
                   <td width="130">
                     <div class="btn btn-small btn-outline-primary" onclick="location.href = 'pengaduan-detail.html'">
-                      Selengkapnya
-                      <i class="fas fa-arrow-right"></i>
+                      <span>
+                      Selengkapnya <i class="fas fa-arrow-right"></i></span>
                     </div>
                   </td>
                 </tr>

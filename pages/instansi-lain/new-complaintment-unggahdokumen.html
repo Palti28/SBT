@@ -7,7 +7,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, maximum-scale=1.0">
   <link rel="stylesheet" href="../../styles/style.css">
   <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+<style>
+  .disini {
+  line-height: 200px;
+}
 
+img {
+  max-width: 200px;
+  max-height: 200px;
+  padding: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@supports (object-fit: cover) {
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+</style>
 
 
   <title>Laporan baru</title>
@@ -93,7 +113,7 @@
 
           <!-- RIGHT CONTENT -->
           <div class="d-flex flex-column flex-start">
-            <h3 class="mb-24 mb-0">Unggah dokumen yang menjadi bukti pengaduan anda</h3>
+            <h3 class="mb-24 mb-2">Unggah dokumen yang menjadi bukti pengaduan anda</h3>
             <label for="" class="help-text">Batas ukuran masing-masing file: 5 mb, <br>
               Cantumkan link untuk bukti dengan format video.</label>
 
@@ -102,22 +122,28 @@
 
               <!-- UPLOAD DOKUMEN EMPTY -->
               <div class="py-2 w-100 border-bottom">
-                <div class="mb-2">1. Bukti Pendukung (silahkan mencantumkan lebih dari satu file)</div>
+                <div class="mb-2">Bukti Pendukung (silahkan mencantumkan lebih dari satu file)</div>
                 <div class="upload-form">
-                  <button class="btn btn-outline-primary btn-small mr-2">Unggah File</button>
+                  <label class="custom-file-upload btn btn-outline-primary btn-small mr-2">
+                    <input type="file" />
+                    Unggah File
+                  </label>
                   <label for="">Surat Pengantar (1).pdf</label>
-                  <button class="btn delete-btn">
+                  <!-- <button class="btn delete-btn">
                     <i class="far fa-trash-alt"></i>
-                  </button>
+                  </button> -->
                 </div>
               </div>
               <!-- UPLOAD DOKUMEN EMPTY -->
 
               <!-- UPLOAD DOKUMEN COMPLETE -->
-              <div class="py-2 border-bottom">
-                <div class="mb-2">2. Berita Acara Klarifikasi dari Terlapor (.pdf, .doc)</div>
+              <!-- <div class="py-2 border-bottom">
+                <div class="mb-2">2. Dokumen Kajian (.pdf, .doc)</div>
                 <div class="upload-form">
-                  <button class="btn btn-outline-primary btn-small mr-2">Unggah File</button>
+                  <label class="custom-file-upload btn btn-outline-primary btn-small mr-2">
+                    <input type="file" />
+                    Unggah File
+                  </label>
                   <div class="uploading w-100">
                     <label for="upload">Menggunggah Surat Pengantar.pdf (50%)</label>
                     <div class="progress">
@@ -129,31 +155,8 @@
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-              </div>
+              </div> -->
               <!-- UPLOAD DOKUMEN COMPLETE -->
-
-              <!-- UPLOADING DOKUMEN -->
-              <div class="py-2 border-bottom">
-                <div class="mb-2">3. Berita Acara Klarifikasi dari Saksi (.pdf, .doc)</div>
-                <div class="upload-form">
-                  <button class="btn btn-outline-primary btn-small mr-2">Unggah File</button>
-                  <label for="">tidak ada file yang dipilih</label>
-                </div>
-              </div>
-              <div class="py-2 border-bottom">
-                <div class="mb-2">4. Surat pengantar dari Bawaslu (.pdf, .doc)</div>
-                <div class="upload-form">
-                  <button class="btn btn-outline-primary btn-small mr-2">Unggah File</button>
-                  <label for="">tidak ada file yang dipilih</label>
-                </div>
-              </div>
-              <div class="py-2 border-bottom">
-                <div class="mb-2">5. Dokumen Kajian (.pdf, .doc)</div>
-                <div class="upload-form">
-                  <button class="btn btn-outline-primary btn-small mr-2">Unggah File</button>
-                  <label for="">tidak ada file yang dipilih</label>
-                </div>
-              </div>
               <div class="py-2 mb-5 w-100">
                 <div class="mb-2">Link Video (jika diperlukan) </div>
                   <input type="text" class="form-control mb-1 w-75 d-inline-block" id="" placeholder="link video">
@@ -161,11 +164,9 @@
                     <img src="../../assets/icons/icons8-plus.svg" style="height: 32px; padding: 0; width:auto"/>
                   </button>
               </div>
-              <!-- UPLOADING DOKUMEN -->
-
               
               <div class="float-left">
-                <button type="submit" class="btn btn-outline-primary mt-3" onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Kembali</button>
+                <button type="" class="btn btn-outline-primary">Kembali</button>
               </div>
               <div class="float-right">
                 <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
@@ -173,6 +174,7 @@
                   onclick="location.href = 'new-complaintment-periksadankonfirmasi.html'">Lanjut Untuk
                   konfirmasi</button>
               </div>
+
             </div>
 
             <!-- END RIGHT CONTENT -->
@@ -189,6 +191,61 @@
 
   <!-- script -->
   <script>
+    document.getElementsByTagName('input')[0].addEventListener('change', function(event) {
+  var file = event.target.files[0];
+  var fileReader = new FileReader();
+  if (file.type.match('image')) {
+    fileReader.onload = function() {
+      var img = document.createElement('img');
+      img.src = fileReader.result;
+      document.getElementsByTagName('div')[0].appendChild(img);
+    };
+    fileReader.readAsDataURL(file);
+  } else {
+    fileReader.onload = function() {
+      var blob = new Blob([fileReader.result], {type: file.type});
+      var url = URL.createObjectURL(blob);
+      var video = document.createElement('video');
+      var timeupdate = function() {
+        if (snapImage()) {
+          video.removeEventListener('timeupdate', timeupdate);
+          video.pause();
+        }
+      };
+      video.addEventListener('loadeddata', function() {
+        if (snapImage()) {
+          video.removeEventListener('timeupdate', timeupdate);
+        }
+      });
+      var snapImage = function() {
+        var canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+        var image = canvas.toDataURL();
+        var success = image.length > 100000;
+        if (success) {
+          var img = document.createElement('img');
+          img.src = image;
+          document.getElementsByTagName('div')[0].appendChild(img);
+          URL.revokeObjectURL(url);
+        }
+        return success;
+      };
+      video.addEventListener('timeupdate', timeupdate);
+      video.preload = 'metadata';
+      video.src = url;
+      // Load video in Safari / IE11
+      video.muted = true;
+      video.playsInline = true;
+      video.play();
+    };
+    fileReader.readAsArrayBuffer(file);
+  }
+});
+
+
+
     ClassicEditor
       .create(document.querySelector('#editor'))
       .then(editor => {

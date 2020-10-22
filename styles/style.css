@@ -46,6 +46,7 @@
   --yellow-btn: #FF8B00;
   --red-btn: #BF2600;
   --black01: #172B4D;
+  --orange: #FF8B00;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -2034,6 +2035,26 @@ pre code {
   background-color: #b0b7c2;
 }
 
+.table-orange,
+.table-orange > th,
+.table-orange > td {
+  background-color: #ffdfb8;
+}
+.table-orange th,
+.table-orange td,
+.table-orange thead th,
+.table-orange tbody + tbody {
+  border-color: #ffc37a;
+}
+
+.table-hover .table-orange:hover {
+  background-color: #ffd49f;
+}
+.table-hover .table-orange:hover > td,
+.table-hover .table-orange:hover > th {
+  background-color: #ffd49f;
+}
+
 .table-active,
 .table-active > th,
 .table-active > td {
@@ -3073,6 +3094,36 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(58, 75, 104, 0.5);
 }
 
+.btn-orange {
+  color: #212529;
+  background-color: #FF8B00;
+  border-color: #FF8B00;
+}
+.btn-orange:hover {
+  color: #fff;
+  background-color: #d97600;
+  border-color: #cc6f00;
+}
+.btn-orange:focus, .btn-orange.focus {
+  color: #fff;
+  background-color: #d97600;
+  border-color: #cc6f00;
+  box-shadow: 0 0 0 0.2rem rgba(222, 124, 6, 0.5);
+}
+.btn-orange.disabled, .btn-orange:disabled {
+  color: #212529;
+  background-color: #FF8B00;
+  border-color: #FF8B00;
+}
+.btn-orange:not(:disabled):not(.disabled):active, .btn-orange:not(:disabled):not(.disabled).active, .show > .btn-orange.dropdown-toggle {
+  color: #fff;
+  background-color: #cc6f00;
+  border-color: #bf6800;
+}
+.btn-orange:not(:disabled):not(.disabled):active:focus, .btn-orange:not(:disabled):not(.disabled).active:focus, .show > .btn-orange.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(222, 124, 6, 0.5);
+}
+
 .btn-outline-primary {
   color: #2F80ED;
   border-color: #2F80ED;
@@ -3471,6 +3522,31 @@ fieldset:disabled a.btn {
 }
 .btn-outline-black01:not(:disabled):not(.disabled):active:focus, .btn-outline-black01:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-black01.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(23, 43, 77, 0.5);
+}
+
+.btn-outline-orange {
+  color: #FF8B00;
+  border-color: #FF8B00;
+}
+.btn-outline-orange:hover {
+  color: #212529;
+  background-color: #FF8B00;
+  border-color: #FF8B00;
+}
+.btn-outline-orange:focus, .btn-outline-orange.focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 139, 0, 0.5);
+}
+.btn-outline-orange.disabled, .btn-outline-orange:disabled {
+  color: #FF8B00;
+  background-color: transparent;
+}
+.btn-outline-orange:not(:disabled):not(.disabled):active, .btn-outline-orange:not(:disabled):not(.disabled).active, .show > .btn-outline-orange.dropdown-toggle {
+  color: #212529;
+  background-color: #FF8B00;
+  border-color: #FF8B00;
+}
+.btn-outline-orange:not(:disabled):not(.disabled):active:focus, .btn-outline-orange:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-orange.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 139, 0, 0.5);
 }
 
 .btn-link {
@@ -5437,6 +5513,19 @@ a.badge-black01:focus, a.badge-black01.focus {
   box-shadow: 0 0 0 0.2rem rgba(23, 43, 77, 0.5);
 }
 
+.badge-orange {
+  color: #212529;
+  background-color: #FF8B00;
+}
+a.badge-orange:hover, a.badge-orange:focus {
+  color: #212529;
+  background-color: #cc6f00;
+}
+a.badge-orange:focus, a.badge-orange.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 139, 0, 0.5);
+}
+
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
@@ -5672,6 +5761,18 @@ a.badge-black01:focus, a.badge-black01.focus {
 }
 .alert-black01 .alert-link {
   color: #000001;
+}
+
+.alert-orange {
+  color: #854800;
+  background-color: #ffe8cc;
+  border-color: #ffdfb8;
+}
+.alert-orange hr {
+  border-top-color: #ffd49f;
+}
+.alert-orange .alert-link {
+  color: #522c00;
 }
 
 @keyframes progress-bar-stripes {
@@ -6132,6 +6233,20 @@ a.badge-black01:focus, a.badge-black01.focus {
   color: #fff;
   background-color: #0c1628;
   border-color: #0c1628;
+}
+
+.list-group-item-orange {
+  color: #854800;
+  background-color: #ffdfb8;
+}
+.list-group-item-orange.list-group-item-action:hover, .list-group-item-orange.list-group-item-action:focus {
+  color: #854800;
+  background-color: #ffd49f;
+}
+.list-group-item-orange.list-group-item-action.active {
+  color: #fff;
+  background-color: #854800;
+  border-color: #854800;
 }
 
 .close {
@@ -6871,6 +6986,16 @@ button.bg-black01:focus {
   background-color: #0b1526 !important;
 }
 
+.bg-orange {
+  background-color: #FF8B00 !important;
+}
+
+a.bg-orange:hover, a.bg-orange:focus,
+button.bg-orange:hover,
+button.bg-orange:focus {
+  background-color: #cc6f00 !important;
+}
+
 .bg-white {
   background-color: #fff !important;
 }
@@ -6981,6 +7106,10 @@ button.bg-black01:focus {
 
 .border-black01 {
   border-color: #172B4D !important;
+}
+
+.border-orange {
+  border-color: #FF8B00 !important;
 }
 
 .border-white {
@@ -10642,6 +10771,14 @@ a.text-black01:hover, a.text-black01:focus {
   color: #050a12 !important;
 }
 
+.text-orange {
+  color: #FF8B00 !important;
+}
+
+a.text-orange:hover, a.text-orange:focus {
+  color: #b36100 !important;
+}
+
 .text-body {
   color: #212529 !important;
 }
@@ -10883,6 +11020,12 @@ h3 {
   border: 1px solid #172B4D;
 }
 
+.btn-special-orange {
+  color: #FF8B00;
+  background-color: rgba(255, 139, 0, 0.1);
+  border: 1px solid #FF8B00;
+}
+
 .badge {
   font-weight: 500;
   size: 11px;
@@ -10893,6 +11036,9 @@ h3 {
 }
 .badge.badge-yellow {
   color: #7C6022;
+}
+.badge.badge-yellow {
+  color: #6B778C;
 }
 
 .timeline {
@@ -10966,6 +11112,9 @@ h3 {
   color: #6B778C;
   font-size: 11px;
 }
+.table.table-laporan .btn {
+  width: 118px;
+}
 
 .upload-dokumen .progress {
   height: 4px;
@@ -11009,6 +11158,35 @@ h3 {
   border-top: 1px solid #bdbdbd;
   padding-top: 1rem;
   margin-top: 1rem;
+}
+
+input[type=file] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #BDBDBD;
+  background-color: #F0F1F4;
+  border-color: #F0F1F4;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-body {
+  padding-bottom: 0.5rem;
+}
+
+.modal-footer {
+  border-top: 0;
+  padding: 0.5rem 0.75rem;
 }
 
 h3 {
@@ -11283,6 +11461,11 @@ label.help-text {
   .login--box {
     max-width: 300px;
   }
+}
+.person-img img {
+  width: 100px;
+  height: 150px;
+  object-fit: scale-down;
 }
 
 /*# sourceMappingURL=style.css.map */
