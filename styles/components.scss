@@ -237,17 +237,26 @@ input[type="file"]{
 }
 
 .custom-file-upload {
+  height: auto;
   display: inline-block;
   height: fit-content;
   cursor: pointer;
 }
 
 
-// BUTTON - DISABLED
+// BUTTON - 
+//DISABLED
 .btn-primary.disabled, .btn-primary:disabled {
   color: #BDBDBD;
   background-color: #F0F1F4;
   border-color: #F0F1F4;}
+
+  //LINK
+  .btn-link{
+    border: none;
+    cursor: pointer;
+    color: $primary;
+  }
 
 
  //MODAL

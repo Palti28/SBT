@@ -11165,6 +11165,7 @@ input[type=file] {
 }
 
 .custom-file-upload {
+  height: auto;
   display: inline-block;
   height: fit-content;
   cursor: pointer;
@@ -11174,6 +11175,12 @@ input[type=file] {
   color: #BDBDBD;
   background-color: #F0F1F4;
   border-color: #F0F1F4;
+}
+
+.btn-link {
+  border: none;
+  cursor: pointer;
+  color: #2F80ED;
 }
 
 .modal-header {

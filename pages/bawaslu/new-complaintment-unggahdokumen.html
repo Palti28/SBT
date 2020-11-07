@@ -156,10 +156,15 @@
               </div>
               <div class="py-2 mb-5 w-100">
                 <div class="mb-2">Link Video (jika diperlukan) </div>
-                  <input type="text" class="form-control mb-1 w-75 d-inline-block" id="" placeholder="link video">
-                  <button class="btn btn-small px-1">
-                    <img src="../../assets/icons/icons8-plus.svg" style="height: 32px; padding: 0; width:auto"/>
+                <div id="videoLinkForm" style="display: none;">
+                  <input type="text" name="link" value="" class="form-control mb-1 w-75 d-inline-block" id="videoLink"
+                    placeholder="link video">
                   </button>
+                  <div type="button" class="px-2 text-danger d-inline-block" onclick="removeFields(this)"><i
+                      class="far fa-trash-alt" style="font-size: larger;"></i></div>
+                </div>
+                <span id="newLinkform"></span>
+                <div class="btn-link" onclick="moreFields()">Tambah link</div>
               </div>
               <!-- UPLOADING DOKUMEN -->
 
@@ -188,6 +193,11 @@
   </div>
 
   <!-- script -->
+ 
+  <script src="../../js/utility.js"></script>
+  <script>
+    window.onload = moreFields; 
+  </script>
   <script>
     ClassicEditor
       .create(document.querySelector('#editor'))
