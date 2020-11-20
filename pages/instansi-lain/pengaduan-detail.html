@@ -106,42 +106,46 @@
               <div class="btn btn-block btn-outline-primary" onclick="location.href = 'pengaduan-berjalan.html'">Lihat Daftar Pengaduan</div>
             </div>
           </div>
-
           <!-- END LEFT CONTENT -->
 
           <!-- RIGHT CONTENT -->
           <div class="d-flex flex-column w-75">
             <div class="d-flex flex-row justify-content-between">
-              <div class="d-flex w-50">
+              <div class="d-flex w-100">
                 <div class="btn btn-outline-primary mr-2">Tulis Komentar</div>
-                <div class="btn btn-outline-primary mr-2">Edit</div>
-
               </div>
             </div>
             <hr>
+            <span class="text-primary small-text mb-2"> IDENTITAS PEGAWAI TERLAPOR </span>
             <div class="d-flex flex-row">
-              <div class="">
-                <img src="../../assets/Gerard.svg" class="avatar-lg" alt="">
+              <div class="avatar-pegawai">
+                <img src="../../assets/pegawai-terlapor.jpg" alt="">
               </div>
               <div class="d-flex flex-column ml-3">
-                <h3>Christiano Ronaldo</h3>
-                <table class="small-text">
+                <h2 class="m-0 font-weight-bold">Enzy Storia</h2>
+                <table class="small-text mt-2">
                   <tr>
                     <td>Instansi</td>
-                    <td>: Dinas Pendidikan, Kepemudaan dan Olahraga Pemerintah Provinsi DKI Jakarta</td>
+                    <td class="text-black01">: Dinas Pendidikan, Kepemudaan dan Olahraga Pemerintah Provinsi DKI Jakarta</td>
                   </tr>
                   <tr>
                     <td>Jabatan</td>
-                    <td>: Kepala Bidang Perencanaan dan Penganggaran</td>
+                    <td class="text-black01">: Kepala Bidang Perencanaan dan Penganggaran</td>
                   </tr>
                   <tr>
                     <td>NIP</td>
-                    <td>: 21312313422212</td>
+                    <td class="text-black01">: 212313124821</td>
+                  </tr>
+                  <tr>
+                    <td>NIK</td>
+                    <td class="text-black01">: 125102i95321</td>
                   </tr>
                 </table>
               </div>
             </div>
             <hr>
+
+            <span class="text-primary small-text mb-3">RINCIAN PELANGGARAN</span>
             <table class="">
               <tr>
                 <td>Pelanggaran</td>
@@ -153,29 +157,34 @@
                 <td>: <b>Kampanye/sosialisasi media sosial (posting, comment, share, like)</b></td>
               </tr>
             </table>
-
-            <hr>
-            <span class="small-text">RINCIAN PELANGGARAN</span>
-
             <div class="d-flex flex-column">
-              <label class="mt-2 mb-1" for="">Sumber Pengaduan</label>
-              <span class="text-black01">Laporan Masyarakat</span>
-              <label class="mt-2 mb-1" for="">Periode Kejadian Pelanggaran</label>
-              <div class="text-black01">Setelah Penetapan Calon</div>
-              <label class="mt-2 mb-1" for="">Waktu Kejadian Pelanggaran</label>
-              <span class="text-black01">Minggu, 13 September 2020</span>
-              <label class="mt-2 mb-1" for="">Rincian Pelanggaran</label>
-              <span class="text-black01">Yang bersangkutan melakukan upload postingan di instagram pribadi miliknya dengan memakai atribut partai A dan menulis caption yang mendukung pasangan calon nomor urut 1.</span>
-             
+              <!-- <label class="mt-2 mb-1" for="">Sumber Pengaduan</label>
+              <span class="text-black01">Laporan Masyarakat</span> -->
+              <label class="mt-2 mb-2 text-primary small-text" for="">Periode Kejadian Pelanggaran</label>
+              <div class="text-black01 mb-2">Setelah Penetapan Calon</div>
+              <label class="mt-2 mb-2 text-primary small-text" for="">Waktu Kejadian Pelanggaran</label>
+              <span class="text-black01 mb-2">Minggu, 13 September 2020</span>
+              <label class="mt-2 mb-2 text-primary small-text" for="">Rincian Pelanggaran</label>
+              <span class="text-black01 mb-2">Yang bersangkutan melakukan upload postingan di instagram pribadi miliknya
+                dengan memakai atribut partai A dan menulis caption yang mendukung pasangan calon nomor urut 1.</span>
             </div>
 
             <hr>
 
-            <span class="text-black02">DOKUMEN BUKTI PENDUKUNG</span>
-            <div class="d-flex flex-row mb-4">
-              <div class="mr-3">asd</div>
-              <div class="mr-3">iuous</div>
-              <br>
+            <span class="text-primary small-text mb-2">DOKUMEN BUKTI PENDUKUNG</span>
+            <div class="d-flex flex-column mb-4">
+              <div class="item d-flex flex-row align-items-center w-100 mb-3">
+                <div class="item-thumbnail mr-2">
+                  <img src="https://via.placeholder.com/50" alt="">
+                </div>
+                <span>Nama file</span>
+              </div>
+              <div class="item d-flex flex-row align-items-center w-100 mb-3">
+                <div class="item-thumbnail mr-2">
+                  <img src="https://via.placeholder.com/50" alt="">
+                </div>
+                <span>Nama file</span>
+              </div>
             </div>
             <div class="d-flex flex-column">
               <span class="small-text">www.youtube.com/ahsdhasihasjdhiadnoicas89798asdhadls </span>
@@ -183,7 +192,7 @@
 
             <hr>
 
-            <span class="mb-3">Komentar</span>
+            <span class="text-primary small-text mb-2">KOMENTAR</span>
             <div class="chat-box">
               <div class="d-flex flex-row single-chat w-50">
                 <div class="">
@@ -215,7 +224,27 @@
       </div>
       <!-- END CONTENT -->
     </div>
+  </div>
 
+  <div class="modal fade" id="tolakLaporanModal" tabindex="-1" aria-labelledby="tolakLaporanModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger" id="tolakLaporanModal">Tolak Laporan</h5>
+        </div>
+        <div class="modal-body">
+          <p>Jika anda tolak, laporan akan dibatalkan dan tidak dilanjutkan ke proses selanjutnya</p>
+          <div class="form-group">
+            <label for="alasanTolak">Alasan Penolakan</label>
+            <textarea class="form-control" id="alasanTolak" rows="6" placeholder="Jelaskan alasan penolakan laporan"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Kembali</button>
+          <button type="button" class="btn btn-danger">Tolak Laporan</button>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -226,7 +255,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
   </script>
-  <script src="../dist/js/bootstrap.min.js"
+  <script src="../../dist/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
 </body>

@@ -23,10 +23,12 @@ $value in $theme-colors {
 
 
 @mixin small-text {
-  font-size: 11px;
+  font-size: 12px;
   // line-height: 16px;
   color: var(--black02);
 }
+
+
 
 //badge
 .badge {
@@ -42,8 +44,12 @@ $value in $theme-colors {
     color: #7C6022;
   }
 
-  &.badge-yellow {
+  &.badge-grey {
     color: #6B778C;
+  }
+
+  &.badge-rust {
+    color: #9B2F0D
   }
 }
 
@@ -65,7 +71,7 @@ $value in $theme-colors {
       width: 1.7rem;
       height: 1.7rem;
       display: inline-block;
-      background-color: $green;
+      background-color: $primary;
       border-radius: 50%;
       border: 2px solid white;
       z-index: 3;
@@ -74,6 +80,8 @@ $value in $theme-colors {
 
     &.step {
       margin-bottom: 24px;
+      padding: 8px;
+      border-radius: 4px;
 
       .number {
         background-color: var(--inactive);
@@ -88,7 +96,7 @@ $value in $theme-colors {
         color: $primary;
       }
 
-      .sub-text{
+      .sub-text {
         @include small-text;
         font-weight: lighter;
         margin-left: 31px;
@@ -96,9 +104,12 @@ $value in $theme-colors {
 
       //active step and completed
       &.active {
+        background-color: #EFF5FE;
+        border: 1px solid $primary;
+
         &:before {
-          content: counter(section);
-          background-color: $primary; 
+          content: "";
+          background-color: $primary;
           color: var(--text);
         }
 
@@ -109,7 +120,7 @@ $value in $theme-colors {
         // inactive step
         ~li {
           &::before {
-            content: counter(section);
+            content: "";
             color: var(--text);
             background-color: var(--inactive);
           }
@@ -147,8 +158,8 @@ $value in $theme-colors {
     }
   }
 
-  &.table-laporan{
-    .btn{
+  &.table-laporan {
+    .btn {
       width: 118px;
     }
   }
@@ -198,6 +209,14 @@ $value in $theme-colors {
     width: 72px;
     height: 72px;
   }
+
+  &-pegawai {
+    img {
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
 }
 
 //NOTIFICATION
@@ -214,16 +233,16 @@ $value in $theme-colors {
 
 
 //CHAT-BOX
-.chat-box{
+.chat-box {
 
-  .single-chat{
+  .single-chat {
     background-color: #EFF5FE;
     padding: 1rem;
     border-radius: 4px;
     border: 1px solid none;
   }
 
-  .chat-box-action{
+  .chat-box-action {
     border-top: 1px solid #bdbdbd;
     padding-top: 1rem;
     margin-top: 1rem;
@@ -232,7 +251,7 @@ $value in $theme-colors {
 
 
 // CUSTOM INPUT FILE BUTTON
-input[type="file"]{
+input[type="file"] {
   display: none;
 }
 
@@ -246,29 +265,123 @@ input[type="file"]{
 
 // BUTTON - 
 //DISABLED
-.btn-primary.disabled, .btn-primary:disabled {
+.btn-primary.disabled,
+.btn-primary:disabled {
   color: #BDBDBD;
   background-color: #F0F1F4;
-  border-color: #F0F1F4;}
+  border-color: #F0F1F4;
+}
 
-  //LINK
-  .btn-link{
-    border: none;
-    cursor: pointer;
-    color: $primary;
-  }
+//LINK
+.btn-link {
+  border: none;
+  cursor: pointer;
+  color: $primary;
+}
 
 
- //MODAL
-.modal-header{
+//MODAL
+.modal-header {
   border-bottom: 0;
 }
 
-.modal-body{
+.modal-body {
   padding-bottom: 0.5rem;
 }
 
-.modal-footer{
+.modal-footer {
   border-top: 0;
   padding: 0.5rem 0.75rem;
+}
+
+
+
+.btn-file {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-file input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}
+
+
+ul.fileList {
+  list-style: none;
+  padding-left: 0;
+}
+
+
+//TABLE
+.table-compact {
+  td {
+    padding: .25rem;
+  }
+}
+
+
+
+.form-control {
+  background-color: #FAFBFC;
+}
+
+
+.loading-screen {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .58);
+  bottom: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  left: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: none;
+  position: fixed;
+  right: 0;
+  -webkit-tap-highlight-color: transparent;
+  top: 0;
+  z-index: 100;
+
+
+  .icon-loading-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      img{
+        width: 100px;
+        height: auto;
+      }
+    }
+  }
+}
+
+.dropdown-menu{
+  hr{
+    background-color: #F0F1F4;
+    margin: .5rem auto;
+  }
 }

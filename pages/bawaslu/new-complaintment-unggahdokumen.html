@@ -93,9 +93,8 @@
 
           <!-- RIGHT CONTENT -->
           <div class="d-flex flex-column flex-start">
-            <h3 class="mb-24 mb-0">Unggah dokumen yang menjadi bukti pengaduan anda</h3>
-            <label for="" class="help-text">Batas ukuran masing-masing file: 5 mb, <br>
-              Cantumkan link untuk bukti dengan format video.</label>
+            <h3 class="mb-24 mb-2">Unggah dokumen yang menjadi bukti pengaduan anda</h3>
+            <label for="" class="help-text">Batas ukuran masing-masing file: 5 mb</label>
 
             <hr>
             <div class="upload-dokumen">
@@ -103,13 +102,19 @@
               <!-- UPLOAD DOKUMEN EMPTY -->
               <div class="py-2 w-100 border-bottom">
                 <div class="mb-2">1. Bukti Pendukung (silahkan mencantumkan lebih dari satu file)</div>
-                <div class="upload-form">
-                  <button class="btn btn-outline-primary btn-small mr-2">Unggah File</button>
-                  <label for="">Surat Pengantar (1).pdf</label>
-                  <button class="btn delete-btn">
-                    <i class="far fa-trash-alt"></i>
-                  </button>
-                </div>
+                <form id="fileupload" action="#" method="POST" enctype="multipart/form-data">
+                  <div class="files d-flex" id="files1">
+                    <!-- <span class="btn btn-default btn-file">
+                        Browse  <input type="file" name="files1" multiple />
+                    </span> -->
+                    <label class="custom-file-upload btn btn-outline-primary btn-small mr-2">
+                      <input type="file" name="files1" multiple />
+                      Unggah File
+                    </label>
+                    <br />
+                    <ul class="fileList w-75"></ul>
+                  </div>
+                </form>
               </div>
               <!-- UPLOAD DOKUMEN EMPTY -->
 
@@ -168,9 +173,10 @@
               </div>
               <!-- UPLOADING DOKUMEN -->
 
-              
+
               <div class="float-left">
-                <button type="submit" class="btn btn-outline-primary mt-3" onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Kembali</button>
+                <button type="submit" class="btn btn-outline-primary mt-3"
+                  onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Kembali</button>
               </div>
               <div class="float-right">
                 <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
@@ -193,10 +199,10 @@
   </div>
 
   <!-- script -->
- 
+
   <script src="../../js/utility.js"></script>
   <script>
-    window.onload = moreFields; 
+    window.onload = moreFields;
   </script>
   <script>
     ClassicEditor
@@ -216,6 +222,99 @@
   </script>
   <script src="../../dist/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+  </script>
+  <script>
+    $.fn.fileUploader = function (filesToUpload, sectionIdentifier) {
+      var fileIdCounter = 0;
+
+      this.closest(".files").change(function (evt) {
+        var output = [];
+
+        for (var i = 0; i < evt.target.files.length; i++) {
+          fileIdCounter++;
+          var file = evt.target.files[i];
+          var fileId = sectionIdentifier + fileIdCounter;
+
+          filesToUpload.push({
+            id: fileId,
+            file: file
+          });
+
+          var removeLink =
+            "<div type=\"button\"  id=\"removeItem\" class=\" px-2 text-secondary d-inline-block float-right\" data-fileid=\"" +
+            fileId + "\"> <i class=\"far fa-trash-alt\">  </i>  </div> ";
+
+          output.push("<li class=\"text-black02\">", escape(file.name), " ", file.size, " bytes. &nbsp; &nbsp; ",
+            removeLink, "</li> ");
+        };
+
+        $(this).children(".fileList")
+          .append(output.join(""));
+
+        //reset the input to null - nice little chrome bug!
+        evt.target.value = null;
+      });
+
+      $(this).on("click", "#removeItem", function (e) {
+        e.preventDefault();
+
+        var fileId = $(this).parent().children("a").data("fileid");
+
+        // loop through the files array and check if the name of that file matches FileName
+        // and get the index of the match
+        for (var i = 0; i < filesToUpload.length; ++i) {
+          if (filesToUpload[i].id === fileId)
+            filesToUpload.splice(i, 1);
+        }
+
+        $(this).parent().remove();
+      });
+
+      this.clear = function () {
+        for (var i = 0; i < filesToUpload.length; ++i) {
+          if (filesToUpload[i].id.indexOf(sectionIdentifier) >= 0)
+            filesToUpload.splice(i, 1);
+        }
+
+        $(this).children(".fileList").empty();
+      }
+
+      return this;
+    };
+
+    (function () {
+      var filesToUpload = [];
+
+      var files1Uploader = $("#files1").fileUploader(filesToUpload, "files1");
+
+      $("#uploadBtn").click(function (e) {
+        e.preventDefault();
+
+        var formData = new FormData();
+
+        for (var i = 0, len = filesToUpload.length; i < len; i++) {
+          formData.append("files", filesToUpload[i].file);
+        }
+
+        $.ajax({
+          url: "http://requestb.in/1k0dxvs1",
+          data: formData,
+          processData: false,
+          contentType: false,
+          type: "POST",
+          success: function (data) {
+            alert("DONE");
+
+            files1Uploader.clear();
+            files2Uploader.clear();
+            files3Uploader.clear();
+          },
+          error: function (data) {
+            alert("ERROR - " + data.responseText);
+          }
+        });
+      });
+    })()
   </script>
 </body>
 

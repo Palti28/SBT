@@ -6,6 +6,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, maximum-scale=1.0">
   <link rel="stylesheet" href="../../styles/style.css">
+
+
   <title>Hello, world!</title>
 </head>
 
@@ -64,23 +66,35 @@
     <!-- START CONTENT -->
     <div class="content--wrapper">
       <div class="container-fluid" style="padding: 0 5%;">
-        <div class="content d-flex flex-md-row  flex-column">
+        <div class="row ">
           <!-- LEFT CONTENT -->
-          <div class="d-flex flex-column flex-start  w-25 ">
+          <div class="col-2 ">
             <button class="btn btn-primary mb-5" onclick="location.href = '../new-complaintment-button.html'">
               <i class="fas fa-plus mr-2"></i>
               Buat Pengaduan Baru
             </button>
             <ul class="nav side--nav flex-column ">
-              <li class="nav-item ">
+              <li class="nav-item">
                 <a class="nav-link active" href="#">
                   <img src="../../assets/icons/new.svg" class="mr-2" alt="">
-                  Laporan
+                  Laporan Baru
                 </a>
               </li>
-              <li class="nav-item ">
-                <a class="nav-link " href="#">
-                  <img src="../../assets/icons/process.svg" class="mr-2" alt="">Pengaduan</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../../assets/icons/process.svg" class="mr-2" alt="">Pengaduan Baru</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../../assets/icons/process.svg" class="mr-2" alt="">Pengaduan Diproses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../../assets/icons/done.svg" class="mr-2" alt="">Pengaduan Selesai</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="../../assets/icons/all.svg" class="mr-2" alt="">Semua Pengaduan</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="#"><img src="../../assets/icons/draft.svg" class="mr-2" alt="">Draft Anda</a>
@@ -94,10 +108,11 @@
               </li> -->
             </ul>
           </div>
+
           <!-- END LEFT CONTENT -->
 
           <!-- RIGHT CONTENT -->
-          <div class="d-flex flex-column">
+          <div class="col-10">
             <div class="d-flex flex-row justify-content-between mb-5">
               <div class="d-flex justify-content-between align-items-center w-50">
                 <div>
@@ -121,12 +136,12 @@
                 <div class="form-group mr-3 mb-0 w-50">
                   <input type="number" class="form-control" id="nik" aria-describedby="NIK" placeholder="Cari">
                 </div>
-                <a href="" style="align-self: center;" class="">Pencarian Lengkap</a>
+                <a href="#advanceSearch" data-toggle="modal" data-target="#advanceSearch">Pencarian Lengkap</a>
               </div>
             </div>
-            <span class="" style="font-size: 20px;">
-              <img src="../../assets/icons/new.svg" alt="">
-              Laporan
+            <span class="">
+              <img src="../../assets/icons/new-black.svg" style="height: 18px;" alt="">
+              <h3 class="d-inline-block mb-0">Pengaduan Baru</h3>
             </span>
             <span class="text-black02 mt-2">Laporan pelanggaran dari instansi pemerintahan atau laporan masyarakat </span>
             <table class="table table-responsive-md mt-24 table-laporan">
@@ -153,7 +168,7 @@
                     <div class="badge badge-purple">Netralitas</div>
                   </td>
                   <td>
-                    <div class="badge badge-yellow">Verifikasi Bawaslu</div>
+                    <div class="badge badge-yellow">Verifikasi KASN</div>
                   </td>
                   <td>14-09-2020</td>
                   <td>PIC here</td>
@@ -174,7 +189,7 @@
                     <div class="badge badge-purple">Netralitas</div>
                   </td>
                   <td>
-                    <div class="badge badge-yellow">Verifikasi Bawaslu</div>
+                    <div class="badge badge-rust">Pemberian Sanksi</div>
                   </td>
                   <td>14-09-2020</td>
                   <td>PSadio Mane (Bawaslu)</td>
@@ -185,6 +200,7 @@
                     </div>
                   </td>
                 </tr>
+
               </tbody>
             </table>
 
@@ -193,7 +209,59 @@
       </div>
       <!-- END CONTENT -->
     </div>
+  </div>
 
+  <div class="modal fade " id="advanceSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h3 class="modal-title" id="exampleModalLabel">Pencarian Lengkap</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="advance--search">
+            <div class="advance--search--form">
+              <div class="form-group">
+                <label for="jenisPelanggaran">Jenis Pelanggaran</label>
+                <select class="form-control" id="jenisPelanggaran">
+                  <option>Netralitas</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="semuaStatus">Status</label>
+                <select class="form-control" id="semuaStatus">
+                  <option>Semua Status</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="nomorLaporan">Nomor Laporan</label>
+                <input type="text" class="form-control" id="nik" aria-describedby="Nama pegawai"
+                  placeholder="Cari Nomor">
+              </div>
+              <div class="form-group">
+                <label for="namaTerlapor">Nama ASN Terlapor</label>
+                <input type="text" class="form-control" id="namaTerlapor" aria-describedby="Instansi"
+                  placeholder="Cari Nama Terlapor">
+              </div>
+              <div class="form-group">
+                <label for="namaPelapor">Nama Pelapor</label>
+                <input type="text" class="form-control" id="namaPelapor" aria-describedby="Instansi"
+                  placeholder="Cari Nama Pelapor">
+              </div>
+              <div class="action my-3 ml-auto">
+                <a href="" onclick="" class="mr-3">Hapus</a>
+                <button type="submit" class="btn btn-outline-primary mt-auto">Cari Laporan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 
@@ -204,7 +272,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
     integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
   </script>
-  <script src="../dist/js/bootstrap.min.js"
+  <script src="../../dist/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
 </body>

@@ -84,26 +84,27 @@
             <div class="mb-4">
               <span class="small-text">STATUS PENGADUAN</span> <br>
               <div class="timeline mt-32">
-                <li class="step ">
-                  <span class="text">Pilih Pegawai</span>
+                <li class="step">
+                  <span class="text">1. Registrasi Pengaduan</span>
                   <div class="sub-text">Selesai diregistrasi 12 september 2020</div>
                 </li>
-                <li class="step active">
-                  <span class="text">Rincian Pelangaran</span>
+                <li class="step">
+                  <span class="text">2. Verifikasi BKN</span>
                   <div class="sub-text">Selesai verifikasi
                     13 September 2020</div>
                 </li>
-                <li class="step ">
-                  <span class="text">Unggah Dokumen</span>
+                <li class="step active">
+                  <span class="text">3. Verifikasi KASN</span>
                   <div class="sub-text">Sedang diverifikasi
                     Batas waktu 23 September 2020</div>
                 </li>
                 <li class="step">
-                  <span class="text">Periksa dan konfirmasi</span>
+                  <span class="text">4. Pemberian Sanki</span>
                   <div class="sub-text">Menunggu verifikasi KASN</div>
                 </li>
               </div>
-              <div class="btn btn-block btn-outline-primary" onclick="location.href = 'pengaduan-berjalan.html'">Lihat Daftar Pengaduan</div>
+              <div class="btn btn-block btn-outline-primary" onclick="location.href = 'pengaduan-berjalan.html'">Lihat
+                Daftar Pengaduan</div>
             </div>
           </div>
           <!-- END LEFT CONTENT -->
@@ -111,36 +112,51 @@
           <!-- RIGHT CONTENT -->
           <div class="d-flex flex-column w-75">
             <div class="d-flex flex-row justify-content-between">
-              <div class="d-flex justify-content-between w-100">
+              <div class="d-flex w-100">
                 <div class="btn btn-outline-primary mr-2">Tulis Komentar</div>
-                <div class="btn btn-primary" type="button" data-toggle="modal" data-target="#kasnProseslaporan">Proses Laporan</div>
+                <!-- <div class="btn btn-primary ml-3" onclick="location.href = 'new-complaintment.html'">Proses Pengaduan</div> -->
+
+                <!-- SETELAH PENGDUAN DI PROSES -->
+                <button type="button" class="btn btn-outline-danger ml-auto" data-toggle="modal"
+                  data-target="#tolakLaporanModal">Tolak</button>
+                <div class="btn btn-primary ml-3" data-toggle="modal" data-target="#rekomendasiSanksiModal">Rekomendasi
+                  Sanksi</div>
+                <!-- SETELAH PENGDUAN DI PROSES // -->
               </div>
             </div>
             <hr>
+            <span class="text-primary small-text mb-2"> IDENTITAS PEGAWAI TERLAPOR </span>
             <div class="d-flex flex-row">
-              <div class="">
-                <img src="../../assets/Gerard.svg" class="avatar-lg" alt="">
+              <div class="avatar-pegawai">
+                <img src="../../assets/pegawai-terlapor.jpg" alt="">
               </div>
               <div class="d-flex flex-column ml-3">
-                <h3>Christiano Ronaldo</h3>
-                <table class="small-text">
+                <h2 class="m-0 font-weight-bold">Enzy Storia</h2>
+                <table class="small-text mt-2">
                   <tr>
                     <td>Instansi</td>
-                    <td>: Dinas Pendidikan, Kepemudaan dan Olahraga Pemerintah Provinsi DKI Jakarta</td>
+                    <td class="text-black01">: Dinas Pendidikan, Kepemudaan dan Olahraga Pemerintah Provinsi DKI Jakarta
+                    </td>
                   </tr>
                   <tr>
                     <td>Jabatan</td>
-                    <td>: Kepala Bidang Perencanaan dan Penganggaran</td>
+                    <td class="text-black01">: Kepala Bidang Perencanaan dan Penganggaran</td>
                   </tr>
                   <tr>
                     <td>NIP</td>
-                    <td>: 21312313422212</td>
+                    <td class="text-black01">: 212313124821</td>
+                  </tr>
+                  <tr>
+                    <td>NIK</td>
+                    <td class="text-black01">: 125102i95321</td>
                   </tr>
                 </table>
               </div>
             </div>
             <hr>
-            <table class="small-text">
+
+            <span class="text-primary small-text mb-3">RINCIAN PELANGGARAN</span>
+            <table class="">
               <tr>
                 <td>Pelanggaran</td>
                 <td>: <div class="badge badge-purple">Netralitas</div>
@@ -150,47 +166,43 @@
                 <td>Kategori</td>
                 <td>: <b>Kampanye/sosialisasi media sosial (posting, comment, share, like)</b></td>
               </tr>
-              <tr>
-                <td>Deskripsi</td>
-                <td>: Saudara Christiano diketahui melakukan kampanye mendukung pasangan calon nomor urut satu dengan
-                  posting di instagram akun pribadi miliknya pada tanggal 12 September 2020. </td>
-              </tr>
             </table>
+            <div class="d-flex flex-column">
+              <!-- <label class="mt-2 mb-1" for="">Sumber Pengaduan</label>
+              <span class="text-black01">Laporan Masyarakat</span> -->
+              <label class="mt-2 mb-2 text-primary small-text" for="">Periode Kejadian Pelanggaran</label>
+              <div class="text-black01 mb-2">Setelah Penetapan Calon</div>
+              <label class="mt-2 mb-2 text-primary small-text" for="">Waktu Kejadian Pelanggaran</label>
+              <span class="text-black01 mb-2">Minggu, 13 September 2020</span>
+              <label class="mt-2 mb-2 text-primary small-text" for="">Rincian Pelanggaran</label>
+              <span class="text-black01 mb-2">Yang bersangkutan melakukan upload postingan di instagram pribadi miliknya
+                dengan memakai atribut partai A dan menulis caption yang mendukung pasangan calon nomor urut 1.</span>
+            </div>
 
             <hr>
 
-            <span class="small-text">DOKUMEN BUKTI PENDUKUNG</span>
-            <div class="d-flex flex-row mb-4">
-              <div class="mr-3">asd</div>
-              <div class="mr-3">iuous</div>
-              <br>
+            <span class="text-primary small-text mb-2">DOKUMEN BUKTI PENDUKUNG</span>
+            <div class="d-flex flex-column mb-4">
+              <div class="item d-flex flex-row align-items-center w-100 mb-3">
+                <div class="item-thumbnail mr-2">
+                  <img src="https://via.placeholder.com/50" alt="">
+                </div>
+                <span>Nama file</span>
+              </div>
+              <div class="item d-flex flex-row align-items-center w-100 mb-3">
+                <div class="item-thumbnail mr-2">
+                  <img src="https://via.placeholder.com/50" alt="">
+                </div>
+                <span>Nama file</span>
+              </div>
             </div>
             <div class="d-flex flex-column">
               <span class="small-text">www.youtube.com/ahsdhasihasjdhiadnoicas89798asdhadls </span>
             </div>
 
             <hr>
-            <span class="small-text">RINCIAN PELANGGARAN</span>
-            <div class="d-flex flex-column">
-              <h6 class="text-black01">Kampanye/sosialisasi media sosial (posting, comment, share, like)</h6>
 
-              <label class="mt-2 mb-1" for="">Peraturan yang Mengatur</label>
-              <div class="text-black01">Pasal 9 angka 2 UU 5/2014, Pasal 4 angka 15 PP 53/2010</div>
-
-              <label class="mt-2 mb-1" for="">Ancaman Sanksi</label>
-              <h6 class="text-black01">Hukuman Disiplin Sedang</h6>
-
-              <div class="text-black01 text-weight-bolder mb-1">sesuai Pasal 12 angka 9, PP 53/2010</div>
-              <ul class="text-black01 small-text">
-                <li>16-20 hari kerja (penundaan gaji berkala selama 1 (satu) tahun)</li>
-                <li>21-25 hari kerja (penundaan kenaikan pangkat selama 1 (satu) tahun)</li>
-                <li>26-30 hari kerja (penurunan pangkat pada pangkat setingkat lebih rendah selama 1 (satu) tahun)</li>
-              </ul>
-            </div>
-
-            <hr>
-
-            <span class="mb-3">Komentar</span>
+            <span class="text-primary small-text mb-2">KOMENTAR</span>
             <div class="chat-box">
               <div class="d-flex flex-row single-chat w-50">
                 <div class="">
@@ -222,105 +234,83 @@
       </div>
       <!-- END CONTENT -->
     </div>
+  </div>
 
-  <div class="modal fade" id="kasnProseslaporan" tabindex="-1" aria-labelledby="kasnProseslaporan" aria-hidden="true">
+  <div class="modal fade" id="tolakLaporanModal" tabindex="-1" aria-labelledby="tolakLaporanModal" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="kasnProseslaporan">Rekomendasi Pelanggaran dan Sanksi</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title text-danger" id="tolakLaporanModal">Tolak Laporan</h5>
         </div>
         <div class="modal-body">
-          Lengkapi rekomendasi anda dengan mengisi
-          <div class="form-group mt-2">
-            <label for="jenisPelanggaran" class="small-text">Jenis Pelanggaran</label>
-            <select class="custom-select" id="jenisPelanggaran">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
+          <p>Jika anda tolak, laporan akan dibatalkan dan tidak dilanjutkan ke proses selanjutnya</p>
+          <div class="form-group">
+            <label for="alasanTolak">Alasan Penolakan</label>
+            <textarea class="form-control" id="alasanTolak" rows="6"
+              placeholder="Jelaskan alasan penolakan laporan"></textarea>
           </div>
-          <div class="form-group mt-2">
-            <label for="tingkatPelanggaran" class="small-text">Tingkat Pelanggaran</label>
-            <select class="custom-select" id="tingkatPelanggaran">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <div class="form-group mt-2">
-            <label for="dasarHukum" class="small-text">Dasar Hukum</label>
-            <select class="custom-select" id="dasarHukum">
-              <option selected>Open this select menu</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-          <div class="form-group mt-2">
-            <label for="jenisSanksi" class="small-text">Jenis Sanksi</label>
-            <select class="custom-select" id="jenisSanksi">
-              <option selected>Pilih Jenis Sanksi</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Kembali</button>
+          <button type="button" class="btn btn-danger">Tolak Laporan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="rekomendasiSanksiModal" tabindex="-1" aria-labelledby="rekomendasiSanksiModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="rekomendasiSanksiModal">Rekomendasi Pelanggaran dan Sanksi</h5>
+        </div>
+        <div class="modal-body">
+          <p>Lengkapi rekomendasi anda dengan mengisi</p>
+          <div class="form-group">
+            <label for="jenisPelanggaran">Example select</label>
+            <select class="form-control" id="jenisPelanggaran">
+              <option>Netralitas</option>
+              <option>...</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="rincianSanksi">Rincian Sanksi</label>
-            <textarea class="form-control" id="rincianSanksi" rows="3"></textarea>
+            <label for="tingkatPelanggaran">Tingkat Pelanggaran</label>
+            <select class="form-control" id="tingkatPelanggaran">
+              <option>Netralitas</option>
+              <option>...</option>
+            </select>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Kembali</button>
-          <button type="button" class="btn btn-primary">Kirim Rekomendasi</button>
+          <div class="form-group">
+            <label for="tingkatPelanggaran">Jenis Sanksi</label>
+            <select class="form-control" id="tingkatPelanggaran">
+              <option>Netralitas</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="rincianSanki">Rincian Sanksi</label>
+            <textarea class="form-control" id="rincianSanki" rows="7" placeholder="Jabarkan"></textarea>
+          </div>
+          <div class="modal-footer px-0">
+            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Kembali</button>
+            <button type="button" class="btn btn-primary">Kirimkan Rekomendasi</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="modal fade" id="kasnProseslaporanTolak" tabindex="-1" aria-labelledby="kasnProseslaporanTolak" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="kasnProseslaporanTolak">Rekomendasi Pelanggaran dan Sanksi</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          Jika anda tolak, laporan akan dibatalkan dan tidak dilanjutkan ke proses selanjutnya.
-          <div class="form-group mt-2">
-            <label for="alasanPenolakan">Alasan Penolakan</label>
-            <textarea class="form-control" id="alasanPenolakan" rows="3"></textarea>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Kembali</button>
-          <button type="button" class="btn btn-primary">Tolak Laporan</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  </div>
 
 
-
-  <!-- script -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-  </script>
-  <script src="../../dist/js/bootstrap.min.js"
-    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-  </script>
+    <!-- script -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="../../dist/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

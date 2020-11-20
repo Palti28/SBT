@@ -6,9 +6,7 @@
   --green: #2FED92;
   --black01: #172B4D;
   --black02: #6B778C;
-
 }
-
 
 //override bootstrap scss
 $theme-colors: (
@@ -22,7 +20,8 @@ $theme-colors: (
   "yellow-btn": #FF8B00,
   "red-btn": #BF2600,
   "black01": #172B4D,
-  "orange": #FF8B00
+  "orange": #FF8B00,
+  "rust": #FFA68A
   );
 
 
@@ -32,11 +31,20 @@ $primary: #2F80ED;
 $green: #2FED92;
 $black02: #5B778C;
 
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
 @import "../dist/scss/bootstrap.scss";
 @import "components.scss";
 // @import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
 @import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
+
+body{
+  font-family: 'Inter', sans-serif;
+}
+
+h2{
+  font-size: 24px;
+  line-height: 28px;
+}
 
 h3 {
   font-size: 20px;
@@ -259,6 +267,8 @@ label {
     a {
       padding: 8px;
       border-radius: 4px;
+      color: $black02;
+      font-size: 14px;
 
       &:hover {
         background-color: rgba(47, 128, 237, 0.2);
@@ -266,10 +276,12 @@ label {
     }
 
     a.nav-link.active {
-
-
       background-color: rgba(47, 128, 237, 0.2);
-
+      color: $primary;
+      img{
+        // change SVG colors
+        filter: invert(37%) sepia(89%) saturate(1254%) hue-rotate(198deg) brightness(97%) contrast(92%);
+      }
     }
   }
 }
@@ -317,9 +329,8 @@ label {
 
 .advance--search--form {
   display: grid;
-  grid-row: auto auto;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: .5rem;
 }
 
 .d-grid {

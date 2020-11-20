@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, maximum-scale=1.0">
   <link rel="stylesheet" href="../../styles/style.css">
 
+  <link rel='icon' href='../../assets/favicon.ico'>
 
-  <title>Hello, world!</title>
+
+  <title>Sistem Berbagi Terintegrasi</title>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
                 <a class="nav-link" href="pengaduan.html">Beranda </span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pengaduan</a>
+                <a class="nav-link" href="./semua-pengaduan.html">Inbox</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Statistik</a>
@@ -51,11 +53,25 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-              <li class="nav-item profile">
+              <li class="nav-item notification dropdown profile">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="../../assets/Alvin.svg" alt="">
+                </a>
+                <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
+                  <span class="font-weight-bold">Mohammad Salah</span>
+                  <span class="text-primary">BAWASLU</span>
+                  <hr>
+                  <a href="#" class="text-black01">Profile</a>
+                  <hr>
+                  <a href="#" class="text-black01">Sign Out &#8594</a>
+                </div>
+              </li>
+              <!-- <li class="nav-item profile">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
                   <img src="../../assets/Alvin.svg" alt="">
                 </a>
-              </li>
+              </li> -->
             </ul>
         </nav>
       </div>
@@ -236,7 +252,7 @@
                     </div>
                   </div>
                 </div>
-                
+
                 <div class="d-flex flex-row py-2 border-bottom">
                   <div class="avatar mr-2">
                     <img src="../../assets/Gerard.svg" alt="">
@@ -281,8 +297,16 @@
     </div>
     <!-- END CONTENT -->
   </div>
-
   </div>
+
+  <!-- IF LOADING SCREEN -->
+  <!-- <div class="loading-screen">
+    <div class="icon-loading-wrapper">
+      <div class="spinner">
+        <img src="../../assets/Spinner-loading.svg" alt="">
+      </div>
+    </div>
+  </div> -->
 
 
   <!-- script -->
