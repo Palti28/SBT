@@ -67,13 +67,13 @@
     <!-- START CONTENT -->
     <div class="content--wrapper">
       <div class="container">
-        <div class="content d-flex flex-column flex-sm-row  ">
+        <div class="content row">
 
           <!-- LEFT CONTENT -->
-          <div class="d-flex flex-column w-25">
+          <div class="col-12 col-md-3">
             <span>Ikuti langkah berikut:</span>
             <!-- TIMELINE -->
-            <div class="timeline mt-32">
+            <div class="timeline d-md-block d-flex mt-32">
               <li class="step">
                 <span class="text">Pilih Pegawai</span>
               </li>
@@ -92,7 +92,7 @@
           <!-- END LEFT CONTENT -->
 
           <!-- RIGHT CONTENT -->
-          <div class="d-flex flex-column flex-start">
+          <div class="col-12 col-md-9">
             <h3 class="mb-24 mb-2">Unggah dokumen yang menjadi bukti pengaduan anda</h3>
             <label for="" class="help-text">Batas ukuran masing-masing file: 5 mb</label>
 
@@ -172,13 +172,10 @@
                 <div class="btn-link" onclick="moreFields()">Tambah link</div>
               </div>
               <!-- UPLOADING DOKUMEN -->
-
-
-              <div class="float-left">
-                <button type="submit" class="btn btn-outline-primary mt-3"
+              <div class="action-bottom">
+                <button type="submit" class="btn btn-outline-primary mt-3 mr-md-auto mr-0"
                   onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Kembali</button>
-              </div>
-              <div class="float-right">
+
                 <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
                 <button type="submit" class="btn btn-primary mt-3"
                   onclick="location.href = 'new-complaintment-periksadankonfirmasi.html'">Lanjut Untuk

@@ -9,8 +9,7 @@
 }
 
 //override bootstrap scss
-$theme-colors: (
-  "primary": #2F80ED,
+$theme-colors: ("primary": #2F80ED,
   "danger": #ff4136,
   "purple": #EFD3FA,
   "black02": #6B778C,
@@ -21,8 +20,8 @@ $theme-colors: (
   "red-btn": #BF2600,
   "black01": #172B4D,
   "orange": #FF8B00,
-  "rust": #FFA68A
-  );
+  "rust": #FFA68A);
+
 
 
 $font-size-base: .875rem !default;
@@ -31,17 +30,25 @@ $primary: #2F80ED;
 $green: #2FED92;
 $black02: #5B778C;
 
+$breakpoint-mobile: 576px;
+
+@mixin mobileScreen {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
 @import "../dist/scss/bootstrap.scss";
 @import "components.scss";
 // @import "https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined";
 @import "https://use.fontawesome.com/releases/v5.8.2/css/all.css";
 
-body{
+body {
   font-family: 'Inter', sans-serif;
 }
 
-h2{
+h2 {
   font-size: 24px;
   line-height: 28px;
 }
@@ -51,7 +58,7 @@ h3 {
   line-height: 24px;
 }
 
-.sub{
+.sub {
   color: $black02;
 }
 
@@ -239,14 +246,18 @@ label {
     padding: 0 12px;
     font-size: 16px;
     line-height: 24px;
-    margin: auto;
+
+    @media (min-width: 992px) {
+      margin: auto;
+    }
+
     font-weight: 400;
 
     a {
       color: var(--black02);
     }
 
-    &.active a {
+    &.active .nav-link {
       color: var(--primary-blue);
     }
 
@@ -278,7 +289,8 @@ label {
     a.nav-link.active {
       background-color: rgba(47, 128, 237, 0.2);
       color: $primary;
-      img{
+
+      img {
         // change SVG colors
         filter: invert(37%) sepia(89%) saturate(1254%) hue-rotate(198deg) brightness(97%) contrast(92%);
       }
@@ -289,7 +301,7 @@ label {
 
 //content
 .content--wrapper {
-  padding: 73px 0;
+  padding: 32px 0;
 
   .content {
     &>div {
@@ -297,7 +309,7 @@ label {
       width: 100%;
 
       @media (min-width: 575.98px) {
-        margin-right: 5%;
+        // margin-right: 5%;
 
       }
 
@@ -331,6 +343,18 @@ label {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: .5rem;
+
+  @include mobileScreen() {
+    grid-template-columns: 1fr;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: block;
+    }
+  }
 }
 
 .d-grid {
@@ -356,6 +380,11 @@ label {
   border-radius: 4px;
   padding: 24px;
 
+  @include mobileScreen {
+    padding: 8px;
+  }
+
+  ;
   color: #BDBDBD;
   background-color: var(--blue02);
 
@@ -436,8 +465,8 @@ label {
 @media (min-width: 1200px) {}
 
 
-.person-img{
-  img{
+.person-img {
+  img {
     width: 100px;
     height: 150px;
     object-fit: scale-down;

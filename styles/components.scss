@@ -64,6 +64,10 @@ $value in $theme-colors {
     list-style: none;
     counter-increment: section;
 
+    @include mobileScreen {
+      text-align: center;
+    }
+
     &:before {
       content: "\2713";
       text-align: center;
@@ -76,6 +80,14 @@ $value in $theme-colors {
       border: 2px solid white;
       z-index: 3;
       transition: all .2s ease-in-out;
+
+      @include mobileScreen {
+        width: 1rem;
+        height: 1rem;
+        margin: auto;
+        display: block;
+      }
+
     }
 
     &.step {
@@ -94,6 +106,13 @@ $value in $theme-colors {
       .text {
         // margin-left: 8px;
         color: $primary;
+        position: relative;
+        top: 2px;
+
+        @include mobileScreen {
+          font-size: 12px;
+        }
+
       }
 
       .sub-text {
@@ -115,6 +134,7 @@ $value in $theme-colors {
 
         .text {
           color: $primary;
+          top: -8px;
         }
 
         // inactive step
@@ -165,6 +185,16 @@ $value in $theme-colors {
   }
 }
 
+.table-compact {
+  tbody tr {
+    td {
+      padding: .25rem;
+      vertical-align: top;
+    }
+  }
+}
+
+//UPLOAD
 .upload-dokumen {
   .progress {
     height: 4px;
@@ -324,12 +354,7 @@ ul.fileList {
 }
 
 
-//TABLE
-.table-compact {
-  td {
-    padding: .25rem;
-  }
-}
+
 
 
 
@@ -371,7 +396,7 @@ ul.fileList {
       top: 50%;
       transform: translate(-50%, -50%);
 
-      img{
+      img {
         width: 100px;
         height: auto;
       }
@@ -379,9 +404,26 @@ ul.fileList {
   }
 }
 
-.dropdown-menu{
-  hr{
+.dropdown-menu {
+  hr {
     background-color: #F0F1F4;
     margin: .5rem auto;
+  }
+}
+
+
+.action-bottom {
+  button {
+    @include mobileScreen {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+//RESPONSIVE
+@include mobileScreen {
+  .w-50 {
+    width: 100% !important;
   }
 }
