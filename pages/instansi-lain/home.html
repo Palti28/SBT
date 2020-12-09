@@ -7,8 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no, maximum-scale=1.0">
   <link rel="stylesheet" href="../../styles/style.css">
 
+  <link rel='icon' href='../../assets/favicon.ico'>
 
-  <title>Hello, world!</title>
+
+  <title>Sistem Berbagi Terintegrasi</title>
 </head>
 
 <body>
@@ -16,7 +18,7 @@
     <!-- HEADER SECTION -->
     <div class="header">
       <div class="container">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-light navbar-expand-lg">
           <a class="navbar-brand" href="#">
             <img src="../../assets/logo.png" alt="">
           </a>
@@ -25,13 +27,13 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse pt-2" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="pengaduan.html">Beranda </span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"> </a>
+                <a class="nav-link" href="./semua-pengaduan.html">Inbox</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Statistik</a>
@@ -51,11 +53,25 @@
                   <a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-              <li class="nav-item profile">
+              <li class="nav-item notification dropdown profile">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="../../assets/Alvin.svg" alt="">
+                </a>
+                <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
+                  <span class="font-weight-bold">Mohammad Salah</span>
+                  <span class="text-primary">BAWASLU</span>
+                  <hr>
+                  <a href="../profile.html" class="text-black01" >Profile</a>
+                  <hr>
+                  <a href="#" class="text-black01">Sign Out &#8594</a>
+                </div>
+              </li>
+              <!-- <li class="nav-item profile">
                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
                   <img src="../../assets/Alvin.svg" alt="">
                 </a>
-              </li>
+              </li> -->
             </ul>
         </nav>
       </div>
@@ -69,10 +85,10 @@
           <i class="fas fa-plus mr-2"></i>
           Buat Laporan Baru
         </button>
-        <div class="content d-flex flex-column flex-sm-row justify-content-between ">
+        <div class="content row">
 
           <!-- LEFT CONTENT -->
-          <div class="d-flex flex-column">
+          <div class="col-12 col-md-6">
             <div class="content--heading d-flex flex-row mt-32">
               <h3 class="d-inline-block mr-4">Perkembangan</h3>
               <a href="" class="d-inline-block">Lihat semua</a>
@@ -97,31 +113,7 @@
                 <div class="d-flex flex-row mt-2">
                   <div class="tag">
                     <span class="badge badge-purple">Netralitas</span>
-                    <span class="badge badge-secondary">Menunggu Bawaslu</span>
-                  </div>
-                  <div class="ml-auto avatar pic">
-                    <span class="text-black02">PIC</span>
-                    -
-                    <!-- <img src="../../assets/Gerard.svg" alt=""> -->
-                  </div>
-                </div>
-              </div>
-              <div class="card p-2">
-                <div class="d-flex flex-row">
-                  <div class="d-flex">
-                    <a href="" class="ticket-number mr-1">N-123</a>
-                    <div class="Name">Christiano Ronaldo</div>
-                  </div>
-                  <div class="date-time ml-auto font-weight-normal text-black02">
-                    <span>Batas Waktu</span>
-                    <span class="mx-1">icon</span>
-                    <span>24/9/2020</span>
-                  </div>
-                </div>
-                <div class="d-flex flex-row mt-2">
-                  <div class="tag">
-                    <span class="badge badge-purple">Netralitas</span>
-                    <span class="badge badge-yellow">Verifikasi Bawaslu</span>
+                    <span class="badge badge-yellow">Verifikasi KASN</span>
                   </div>
                   <div class="ml-auto avatar">
                     <span class="text-black02">PIC</span>
@@ -139,8 +131,6 @@
               </div>
               <a href="" class="ml-auto caption-02">Selengkapnya</a>
             </div>
-
-            <!-- PENGADUAN -->
 
             <div class="content--subheading d-flex flex-row mt-5">
               <div class="text-primary mr-2">14</div>
@@ -162,31 +152,7 @@
                 <div class="d-flex flex-row mt-2">
                   <div class="tag">
                     <span class="badge badge-purple">Netralitas</span>
-                    <span class="badge badge-black02">Menunggu KASN</span>
-                  </div>
-                  <div class="ml-auto avatar pic">
-                    <span class="text-black02">PIC</span>
-                    -
-                    <!-- <img src="../../assets/Gerard.svg" alt=""> -->
-                  </div>
-                </div>
-              </div>
-              <div class="card p-2">
-                <div class="d-flex flex-row">
-                  <div class="d-flex">
-                    <a href="" class="ticket-number mr-1">N-123</a>
-                    <div class="Name">Christiano Ronaldo</div>
-                  </div>
-                  <div class="date-time ml-auto font-weight-normal text-black02">
-                    <span>Batas Waktu</span>
-                    <span class="mx-1">icon</span>
-                    <span>24/9/2020</span>
-                  </div>
-                </div>
-                <div class="d-flex flex-row mt-2">
-                  <div class="tag">
-                    <span class="badge badge-purple">Netralitas</span>
-                    <span class="badge badge-orange">Verifikasi KASN</span>
+                    <span class="badge badge-yellow">Verifikasi KASN</span>
                   </div>
                   <div class="ml-auto avatar">
                     <span class="text-black02">PIC</span>
@@ -205,8 +171,6 @@
               <a href="" class="ml-auto caption-02">Selengkapnya</a>
             </div>
 
-
-            <!-- DRAFT -->
             <div class="content--subheading d-flex flex-row mt-5">
               <div class="text-primary mr-2">2</div>
               <label class="font-weight-normal">Draft</label>
@@ -227,7 +191,7 @@
                 <div class="d-flex flex-row mt-2">
                   <div class="tag">
                     <span class="badge badge-purple">Netralitas</span>
-                    <span class="badge badge-black02">Draft</span>
+                    <span class="badge badge-yellow">Verifikasi KASN</span>
                   </div>
                   <div class="ml-auto avatar">
                     <span class="text-black02">PIC</span>
@@ -250,7 +214,7 @@
           <!-- END LEFT CONTENT -->
 
           <!-- RIGHT CONTENT -->
-          <div class="d-flex flex-column">
+          <div class="col-12 col-md-6">
             <div class="d-flex flex-column">
               <div class="content--heading d-flex flex-row mt-32 mb-3">
                 <h3 class="d-inline-block mr-5">Aktifitas</h3>
@@ -333,8 +297,16 @@
     </div>
     <!-- END CONTENT -->
   </div>
-
   </div>
+
+  <!-- IF LOADING SCREEN -->
+  <!-- <div class="loading-screen">
+    <div class="icon-loading-wrapper">
+      <div class="spinner">
+        <img src="../../assets/Spinner-loading.svg" alt="">
+      </div>
+    </div>
+  </div> -->
 
 
   <!-- script -->

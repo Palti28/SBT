@@ -13,54 +13,68 @@
 
 <body>
   <div class="dashboard">
-      <!-- HEADER SECTION -->
-      <div class="header">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">
-              <img src="../../assets/logo.png" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Beranda </span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pengaduan</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Statistik</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Peraturan</a>
-                </li>
-                <li class="nav-item notification dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="far fa-bell"></i>
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item profile">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
-                    <img src="../../assets/Alvin.svg" alt="">
-                  </a>
-                </li>
-              </ul>
-          </nav>
-        </div>
+    <!-- HEADER SECTION -->
+    <div class="header">
+      <div class="container">
+        <nav class="navbar navbar-light navbar-expand-lg">
+          <a class="navbar-brand" href="#">
+            <img src="../../assets/logo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse pt-2" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="pengaduan.html">Beranda </span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./semua-pengaduan.html">Inbox</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Statistik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Peraturan</a>
+              </li>
+              <li class="nav-item notification dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <i class="far fa-bell"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item notification dropdown profile">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <img src="../../assets/Alvin.svg" alt="">
+                </a>
+                <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
+                  <span class="font-weight-bold">Mohammad Salah</span>
+                  <span class="text-primary">BAWASLU</span>
+                  <hr>
+                  <a href="../profile.html" class="text-black01">Profile</a>
+                  <hr>
+                  <a href="#" class="text-black01">Sign Out &#8594</a>
+                </div>
+              </li>
+              <!-- <li class="nav-item profile">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                  <img src="../../assets/Alvin.svg" alt="">
+                </a>
+              </li> -->
+            </ul>
+        </nav>
       </div>
-      <!-- END HEADER SECTION -->
+    </div>
+    <!-- END HEADER SECTION -->
 
     <!-- START CONTENT -->
     <div class="content--wrapper">
@@ -123,15 +137,16 @@
               </div>
               <!-- PREVIEW BOX -->
 
-              <div class="float-right">
+              <div class="action-bottom">
                 <button type="submit" class="btn btn-outline-primary mt-3 ">Simpan Draft</button>
-               
+
                 <!-- Form valid -->
-                <button type="submit" class="btn btn-primary mt-3" onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Lanjut ke Rincian </button>
+                <button type="submit" class="btn btn-primary mt-3"
+                  onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Lanjut ke Rincian </button>
 
                 <!-- Form invalid -->
                 <!-- <button type="submit" class="btn btn-primary mt-3" disabled onclick="location.href = 'new-complaintment-rincianpelanggaran.html'">Lanjut ke Rincian </button> -->
-              
+
               </div>
             </div>
             <!-- END RIGHT CONTENT -->

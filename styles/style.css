@@ -11252,6 +11252,12 @@ h3 {
   font-weight: lighter;
   margin-left: 31px;
 }
+@media (max-width: 576px) {
+  .timeline li.step .sub-text {
+    margin-left: 0;
+    font-size: 11px;
+  }
+}
 .timeline li.step.active {
   background-color: #EFF5FE;
   border: 1px solid #2F80ED;
@@ -11272,6 +11278,7 @@ h3 {
 }
 .timeline li.step.active ~ li .text {
   color: var(--inactive);
+  top: -8px;
 }
 
 .table thead th {
@@ -11459,12 +11466,30 @@ ul.fileList {
     width: 100%;
   }
 }
+@media (max-width: 576px) {
+  .action-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 
 @media (max-width: 576px) {
   .w-50 {
     width: 100% !important;
   }
 }
+.svg-primary {
+  filter: invert(37%) sepia(89%) saturate(1254%) hue-rotate(198deg) brightness(97%) contrast(92%);
+}
+
+.folder-menu.dropdown-menu {
+  width: 90%;
+}
+
+.dropdown-folder.dropdown-toggle::after {
+  display: none;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }

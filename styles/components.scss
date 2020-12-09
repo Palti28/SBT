@@ -119,6 +119,11 @@ $value in $theme-colors {
         @include small-text;
         font-weight: lighter;
         margin-left: 31px;
+
+        @media(max-width: 576px) {
+          margin-left: 0;
+          font-size: 11px;
+        }
       }
 
       //active step and completed
@@ -147,6 +152,7 @@ $value in $theme-colors {
 
           .text {
             color: var(--inactive);
+            top: -8px;
           }
         }
       }
@@ -419,6 +425,11 @@ ul.fileList {
       width: 100%;
     }
   }
+
+  @include mobileScreen {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
 
 //RESPONSIVE
@@ -426,4 +437,20 @@ ul.fileList {
   .w-50 {
     width: 100% !important;
   }
+}
+
+
+//BTN Filter
+.svg-primary {
+  filter: invert(37%) sepia(89%) saturate(1254%) hue-rotate(198deg) brightness(97%) contrast(92%);
+}
+
+.folder-menu {
+  &.dropdown-menu {
+    width: 90%;
+  }
+}
+
+.dropdown-folder.dropdown-toggle::after {
+  display: none;
 }
