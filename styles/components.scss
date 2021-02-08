@@ -51,6 +51,10 @@ $value in $theme-colors {
   &.badge-rust {
     color: #9B2F0D
   }
+  &.badge-ligth-blue {
+    color: #2F80ED;
+    background-color: #D6E6FE;
+  }
 }
 
 // -- Timeline

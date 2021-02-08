@@ -11187,6 +11187,10 @@ h3 {
 .badge.badge-rust {
   color: #9B2F0D;
 }
+.badge.badge-ligth-blue {
+  color: #2F80ED;
+  background-color: #D6E6FE;
+}
 
 .timeline {
   --inactive: #BDBDBD;
